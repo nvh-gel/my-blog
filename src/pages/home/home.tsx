@@ -1,21 +1,20 @@
-import React, { FC } from 'react';
-import { HomeWrapper } from './home.styled';
-import Intro from '../../components/intro/intro.lazy';
-import Service from '../../components/service/service.lazy';
-import Project from '../../components/project/project.lazy';
-import Location from '../../components/location/location.lazy';
+import { FC } from 'react';
 import Contact from '../../components/contact/contact.lazy';
+import Intro from '../../components/intro/intro.lazy';
+import Location from '../../components/location/location.lazy';
+import Project from '../../components/project/project.lazy';
+import Service from '../../components/service/service.lazy';
 
-interface HomeProps {}
+interface HomeProps { }
 
 const Home: FC<HomeProps> = () => (
- <HomeWrapper data-testid="Home">
-    <Intro/>
-    <Service/>
-    <Project/>
-    <Location/>
-    <Contact/>
- </HomeWrapper>
+   <div>
+      <Intro />
+      <Service />
+      <Project />
+      <Location />
+      <Contact />
+   </div>
 );
 
 export default Home;

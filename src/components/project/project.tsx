@@ -1,12 +1,11 @@
-import React, { FC } from 'react';
-import { ProjectWrapper } from './project.styled';
+import { FC } from 'react';
 
-interface ProjectProps {}
+interface ProjectProps { }
 
 const Project: FC<ProjectProps> = () => (
- <ProjectWrapper data-testid="Project">
-    Project Component
- </ProjectWrapper>
+   <>
+      Project Component
+   </>
 );
 
 export default Project;

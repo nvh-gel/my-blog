@@ -1,12 +1,9 @@
-import React, { FC } from 'react';
-import { LocationWrapper } from './location.styled';
+import { FC } from 'react';
 
-interface LocationProps {}
+interface LocationProps { }
 
 const Location: FC<LocationProps> = () => (
- <LocationWrapper data-testid="Location">
-    Location Component
- </LocationWrapper>
+   <>Location Component</>
 );
 
 export default Location;

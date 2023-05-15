@@ -1,12 +1,11 @@
-import React, { FC } from 'react';
-import { ServiceWrapper } from './service.styled';
+import { FC } from 'react';
 
-interface ServiceProps {}
+interface ServiceProps { }
 
 const Service: FC<ServiceProps> = () => (
- <ServiceWrapper data-testid="Service">
-    Service Component
- </ServiceWrapper>
+   <>
+      Service Component
+   </>
 );
 
 export default Service;

@@ -1,12 +1,11 @@
-import React, { FC } from 'react';
-import { IntroWrapper } from './intro.styled';
+import { FC } from 'react';
 
-interface IntroProps {}
+interface IntroProps { }
 
 const Intro: FC<IntroProps> = () => (
- <IntroWrapper data-testid="Intro">
-    Intro Component
- </IntroWrapper>
+   <>
+      Intro Component
+   </>
 );
 
 export default Intro;
