@@ -1,4 +1,5 @@
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@use './media-query.scss' as *;
+@use "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import url(http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800);
 
 body {
