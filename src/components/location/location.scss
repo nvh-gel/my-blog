@@ -1,0 +1,19 @@
+.location {
+    text-transform: uppercase;
+    color: white;
+    height: 800px;
+
+    h2 {
+        padding-top: 40px;
+        font-size: 50px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+
+    .google-map {
+        padding-top: 40px;
+        height: 640px;
+        width: 100%;
+    }
+}
