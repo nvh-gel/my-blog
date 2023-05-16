@@ -10,7 +10,7 @@ const Header: FC<HeaderProps> = () => {
    return (
       <div className='header'>
          <Container>
-            <Navbar collapseOnSelect expand='lg' sticky='top' className='navbar'>
+            <Navbar collapseOnSelect expand='lg' fixed='top' className='navbar'>
                <Navbar.Brand className='logo' href='/'>EDEN</Navbar.Brand>
                <Navbar.Toggle />
                <Navbar.Collapse className='justify-content-end'>
