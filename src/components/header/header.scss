@@ -2,26 +2,31 @@
     background-color: #98d361;
     min-height: 50px;
     line-height: 40px;
-}
 
-.navbar {
-    padding: 0px 200px;
-    background-color: #98d361;
-}
+    .logo {
+        font-size: 26px;
+        font-weight: 600;
+        color: white;
+        text-transform: uppercase;
 
-.logo {
-    font-size: 26px;
-    font-weight: 600;
-    color: white;
-}
+        span {
+            font-size: 34px;
+        }
+    }
 
-.menu-item {
-    color: white;
-    margin: 0px 10px;
-    z-index: 210;
-}
+    .navbar {
+        padding: 0px 200px;
+        background-color: #98d361;
 
-.menu-item:hover {
-    background-color: white;
-    color: #7cb14a !important
+        .menu-item {
+            color: white;
+            margin: 0px 10px;
+            z-index: 210;
+
+            &:hover {
+                background-color: white;
+                color: #7cb14a !important;
+            }
+        }
+    }
 }

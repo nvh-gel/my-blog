@@ -11,7 +11,7 @@ const Header: FC<HeaderProps> = () => {
       <div className='header'>
          <Container>
             <Navbar collapseOnSelect expand='lg' fixed='top' className='navbar'>
-               <Navbar.Brand className='logo' href='/'>EDEN</Navbar.Brand>
+               <Navbar.Brand className='logo' href='/'><span>E</span>den</Navbar.Brand>
                <Navbar.Toggle />
                <Navbar.Collapse className='justify-content-end'>
                   <Nav className='menu'>
