@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/985.cfaa6996.chunk.css","mappings":"AAAA,UACI,aAEA,sBAEI,aADA,iBAEA","sources":["components/location/location.scss"],"sourcesContent":[".location {\r\n    height: 800px;\r\n\r\n    .google-map {\r\n        padding-top: 40px;\r\n        height: 640px;\r\n        width: 100%;\r\n    }\r\n}\r\n"],"names":[],"sourceRoot":""}
