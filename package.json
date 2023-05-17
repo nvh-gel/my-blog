@@ -2,6 +2,7 @@
   "name": "my-blog",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/nvhien-blog",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
