@@ -18,7 +18,7 @@ const Header: FC<HeaderProps> = () => {
     <div className="header" id="top">
       <Container>
         <Navbar collapseOnSelect expand="lg" fixed="top" className="navbar">
-          <Navbar.Brand className="logo" href="/">
+          <Navbar.Brand className="logo" href={process.env.PUBLIC_URL}>
             <span>E</span>den
           </Navbar.Brand>
           <Navbar.Toggle />

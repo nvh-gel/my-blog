@@ -14,6 +14,10 @@
                 color: #7cb14a;
                 cursor: pointer;
             }
+
+            svg {
+                filter: drop-shadow(10px 10px 10px rgba(124, 177, 74, 0.5));
+            }
         }
     }
 }

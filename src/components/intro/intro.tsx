@@ -1,8 +1,8 @@
 import {
-   faBookOpen,
-   faCode,
-   faGamepad,
-   faRoute,
+  faBookOpen,
+  faCode,
+  faGamepad,
+  faRoute,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FC } from "react";
