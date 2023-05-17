@@ -33,10 +33,10 @@ const Project: FC<ProjectProps> = () => {
             <section id="cd-timeline-project" className='cd-container'>
                {projects.map((project) => (
                   <div className='cd-timeline-block' key={project.title}>
-                     <div className='cd-timeline-img bounce-in'>
+                     <div className='cd-timeline-img'>
                         <FontAwesomeIcon icon={faCode} />
                      </div>
-                     <div className='cd-timeline-content projects bounce-in'>
+                     <div className='cd-timeline-content projects'>
                         <Image src={project.img} />
                         <div className='project-content'>
                            <h2>{project.title}</h2>
