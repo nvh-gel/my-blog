@@ -9,7 +9,7 @@ import './intro.scss';
 interface IntroProps { }
 
 const Intro: FC<IntroProps> = () => {
-   const image = 'https://picsum.photos/1920/1080';
+   const image = 'https://source.unsplash.com/random/1920x600/?blur';
 
    return (
       <div id='intro' className="intro" style={{ backgroundImage: `url(${image})` }}>

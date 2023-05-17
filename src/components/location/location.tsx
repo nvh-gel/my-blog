@@ -6,7 +6,7 @@ import './location.scss';
 interface LocationProps { }
 
 const Location: FC<LocationProps> = () => {
-   const image = 'https://picsum.photos/1920/800';
+   const image = 'https://source.unsplash.com/random/1920x800/?city,blur';
    const location = {
       address: 'Tan Binh, Ho Chi Minh City, Vietnam',
       lat: 10.7750679,
