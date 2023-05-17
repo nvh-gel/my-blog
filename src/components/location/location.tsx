@@ -25,7 +25,7 @@ const Location: FC<LocationProps> = () => {
    }
 
    return (
-      <div className='location' style={{ backgroundImage: `url(${image})` }}>
+      <div id='location' className='location' style={{ backgroundImage: `url(${image})` }}>
          <h2>Visit Us</h2>
          <h3>Where we operate</h3>
          <Container className='google-map'>

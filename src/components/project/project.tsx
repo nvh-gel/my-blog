@@ -18,7 +18,7 @@ const Project: FC<ProjectProps> = () => {
    ];
 
    return (
-      <div>
+      <div id='project'>
          <div style={{ backgroundImage: `url(${image})` }}>
             <Container className='project-cover'>
                <h2>Projects</h2>

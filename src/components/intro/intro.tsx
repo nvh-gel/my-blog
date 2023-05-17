@@ -12,7 +12,7 @@ const Intro: FC<IntroProps> = () => {
    const image = 'https://picsum.photos/1920/1080';
 
    return (
-      <div className="intro" style={{ backgroundImage: `url(${image})` }}>
+      <div id='intro' className="intro" style={{ backgroundImage: `url(${image})` }}>
          <Container>
             <Row className='intro-button'>
                <Col><FontAwesomeIcon icon={faRoute} className='intro-icon' /><br />Travel</Col>

@@ -30,7 +30,7 @@ const Service: FC<ServiceProps> = () => {
    }];
 
    return (
-      <div>
+      <div id='service'>
          <div className='headline'>
             <p>WHAT WE CAN DO</p>
          </div>

@@ -9,7 +9,7 @@ import "./contact.scss";
 interface ContactProps {}
 
 const Contact: FC<ContactProps> = () => (
-  <div>
+  <div id='contact'>
     <div className="headline">
       <p>Send us a message</p>
     </div>
