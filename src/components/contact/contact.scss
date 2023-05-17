@@ -3,11 +3,22 @@
 
     .row {
         margin-bottom: 20px;
+
+        input, textarea {
+            border-color: #eee;
+            border-width: 3px;
+            &:focus {
+                box-shadow: 0 0 10px #98d361;
+                border-color: #98d361;
+            }
+            border-radius: 0;
+        }
     }
 
     .send-button {
         background-color: #98d361;
         border-color: white;
+        border-radius: 0;
         width: 25%;
     }
 }

@@ -1,14 +1,19 @@
 .intro {
     height: 500px;
-    text-shadow: 1px 0 #7cb14a, -1px 0 #7cb14a, 0 1px #7cb14a, 0 -1px #7cb14a;
-}
 
-.intro-button {
-    padding-top: 15%;
-    font-size: 40px;
-    color: white;
-}
+    .intro-row {
+        padding-top: 15%;
+        font-size: 40px;
+        color: white;
 
-.intro-icon {
-    font-size: 60px;
+        .intro-icon {
+            font-size: 60px;
+            text-shadow: 1px 0 #7cb14a, -1px 0 #7cb14a, 0 1px #7cb14a, 0 -1px #7cb14a;
+
+            &:hover {
+                color: #7cb14a;
+                cursor: pointer;
+            }
+        }
+    }
 }

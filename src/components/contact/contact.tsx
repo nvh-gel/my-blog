@@ -48,10 +48,10 @@ const Contact: FC<ContactProps> = () => (
           <div className="about">
             <h4>More about us!</h4>
             <p>We can be reached through email our phone number via submitting email, call or message to</p>
-            <p><b>Mailing Address: </b>Lac Long Quan Street, Tan Binh District, Ho Chi Minh City, Vietnam</p>
-            <p><b>Tel: </b>+84776798665</p>
-            <p><b>Email: </b>nvhien2703@outlook.com</p>
-            <p>Looking forward to a chance to support you.</p>
+            <p><b>Mailing Address: </b><i>Lac Long Quan Street, Tan Binh District, Ho Chi Minh City, Vietnam</i></p>
+            <p><b>Tel: </b><i>+84776798665</i></p>
+            <p><b>Email: </b><i>nvhien2703@outlook.com</i></p>
+            <p>Looking forward to a chance to work with you.</p>
           </div>
         </Col>
       </Row>

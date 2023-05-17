@@ -1,5 +1,5 @@
 import {
-  faFacebookF,
+  faFacebookMessenger,
   faGithub,
   faLinkedinIn,
   faTwitter,
@@ -26,23 +26,54 @@ const Footer: FC<FooterProps> = () => {
     <div className="footer">
       <Container>
         <Row>
-          <Col className="copyright">Copyright © 2023. Developed by Eden</Col>
+          <Col className="copyright">
+            Copyright © 2023. Designed by{" "}
+            <a
+              href="https://templatemo.com/"
+              target="_blank"
+              rel="noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              templatemo
+            </a>
+            , implemented by Eden.
+          </Col>
           <Col>
             <Button className="button-top" onClick={handleBackToTop}>
               BACK TO TOP
             </Button>
           </Col>
           <Col className="social">
-            <Button className="social-icon" variant="link" href="#">
-              <FontAwesomeIcon icon={faFacebookF} />
+            <Button
+              className="social-icon"
+              variant="link"
+              href="https://www.messenger.com/t/100002202148814"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faFacebookMessenger} />
             </Button>
-            <Button className="social-icon" variant="link" href="#">
+            <Button
+              className="social-icon"
+              variant="link"
+              href="https://twitter.com/HienNV11"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faTwitter} />
             </Button>
-            <Button className="social-icon" variant="link" href="#">
+            <Button
+              className="social-icon"
+              variant="link"
+              href="https://www.linkedin.com/in/hien-nguyen-van-389281b0/"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faLinkedinIn} />
             </Button>
-            <Button className="social-icon" variant="link" href="#">
+            <Button
+              className="social-icon"
+              variant="link"
+              href="https://github.com/nvh-gel"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faGithub} />
             </Button>
           </Col>

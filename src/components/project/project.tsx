@@ -9,7 +9,7 @@ import "./project.scss";
 interface ProjectProps {}
 
 const Project: FC<ProjectProps> = () => {
-  const image = "https://source.unsplash.com/random/1920x300/?blur";
+  const image = "https://source.unsplash.com/random/1920x300/?project,blur";
   const projects = [
     {
       title: "TWINT",
@@ -66,7 +66,7 @@ const Project: FC<ProjectProps> = () => {
   return (
     <div id="project">
       <div style={{ backgroundImage: `url(${image})` }}>
-        <Container className="project-cover">
+        <Container className="cover project-cover">
           <h2>Projects</h2>
           <h3>What we have done</h3>
         </Container>
