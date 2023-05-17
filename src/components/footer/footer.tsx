@@ -1,8 +1,8 @@
 import {
-   faFacebookF,
-   faGithub,
-   faLinkedinIn,
-   faTwitter
+  faFacebookF,
+  faGithub,
+  faLinkedinIn,
+  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FC } from "react";
@@ -15,25 +15,34 @@ import "./footer.scss";
 interface FooterProps {}
 
 const Footer: FC<FooterProps> = () => {
+  function handleBackToTop(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <div className="footer">
       <Container>
         <Row>
           <Col className="copyright">Copyright © 2023. Developed by Eden</Col>
           <Col>
-            <Button className="button-top">BACK TO TOP</Button>
+            <Button className="button-top" onClick={handleBackToTop}>
+              BACK TO TOP
+            </Button>
           </Col>
           <Col className="social">
-            <Button className="social-icon" variant="link">
+            <Button className="social-icon" variant="link" href="#">
               <FontAwesomeIcon icon={faFacebookF} />
             </Button>
-            <Button className="social-icon" variant="link">
+            <Button className="social-icon" variant="link" href="#">
               <FontAwesomeIcon icon={faTwitter} />
             </Button>
-            <Button className="social-icon" variant="link">
+            <Button className="social-icon" variant="link" href="#">
               <FontAwesomeIcon icon={faLinkedinIn} />
             </Button>
-            <Button className="social-icon" variant="link">
+            <Button className="social-icon" variant="link" href="#">
               <FontAwesomeIcon icon={faGithub} />
             </Button>
           </Col>
