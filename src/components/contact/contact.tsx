@@ -8,55 +8,82 @@ import "./contact.scss";
 
 interface ContactProps {}
 
-const Contact: FC<ContactProps> = () => (
-  <div id='contact'>
-    <div className="headline">
-      <p>Send us a message</p>
+const Contact: FC<ContactProps> = () => {
+
+  function handleSend(e: any): void {
+    e.preventDefault();
+    alert("Function is not yet implemented, please return to it later.");
+  }
+
+  return (
+    <div id="contact">
+      <div className="headline">
+        <p>Send us a message</p>
+      </div>
+      <Container>
+        <div className="triangle" />
+        <Row>
+          <Col sm={8}>
+            <Form className="contact-form">
+              <Row>
+                <Col className="input-name col-md-4">
+                  <Form.Control placeholder="Name" name="name" />
+                </Col>
+                <Col className="input-email col-md-4">
+                  <Form.Control type="email" placeholder="Email" name="name" />
+                </Col>
+                <Col className="input-subject col-md-4">
+                  <Form.Control placeholder="Subject" name="subject" />
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Form.Control
+                    as="textarea"
+                    rows={8}
+                    name="message"
+                    placeholder="Message"
+                  />
+                </Col>
+              </Row>
+              <Button
+                className="send-button"
+                type="submit"
+                onClick={handleSend}
+              >
+                SEND NOW
+              </Button>
+            </Form>
+          </Col>
+          <Col sm={4}>
+            <div className="about">
+              <h4>More about us!</h4>
+              <p>
+                We can be reached through email our phone number via submitting
+                email, call or message to
+              </p>
+              <p>
+                <b>Mailing Address: </b>
+                <i>
+                  Lac Long Quan Street, Tan Binh District, Ho Chi Minh City,
+                  Vietnam
+                </i>
+              </p>
+              <p>
+                <b>Tel: </b>
+                <i>+84776798665</i>
+              </p>
+              <p>
+                <b>Email: </b>
+                <i>nvhien2703@outlook.com</i>
+              </p>
+              <p>Looking forward to a chance to work with you.</p>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </div>
-    <Container>
-      <div className="triangle" />
-      <Row>
-        <Col sm={8}>
-          <Form className="contact-form">
-            <Row>
-              <Col className="input-name col-md-4">
-                <Form.Control placeholder="Name" name="name" />
-              </Col>
-              <Col className="input-email col-md-4">
-                <Form.Control type="email" placeholder="Email" name="name" />
-              </Col>
-              <Col className="input-subject col-md-4">
-                <Form.Control placeholder="Subject" name="subject" />
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <Form.Control
-                  as="textarea"
-                  rows={8}
-                  name="message"
-                  placeholder="Message"
-                />
-              </Col>
-            </Row>
-            <Button className="send-button" type="submit">
-              SEND NOW
-            </Button>
-          </Form>
-        </Col>
-        <Col sm={4}>
-          <div className="about">
-            <h4>More about us!</h4>
-            <p>We can be reached through email our phone number via submitting email, call or message to</p>
-            <p><b>Mailing Address: </b><i>Lac Long Quan Street, Tan Binh District, Ho Chi Minh City, Vietnam</i></p>
-            <p><b>Tel: </b><i>+84776798665</i></p>
-            <p><b>Email: </b><i>nvhien2703@outlook.com</i></p>
-            <p>Looking forward to a chance to work with you.</p>
-          </div>
-        </Col>
-      </Row>
-    </Container>
-  </div>
-);
+  );
+};
 
 export default Contact;

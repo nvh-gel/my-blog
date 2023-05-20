@@ -1,16 +1,16 @@
 import { Container } from "react-bootstrap";
+import { BrowserRouter, Routes } from "react-router-dom";
 import "./App.scss";
+import { routes } from "./Routes";
 import Footer from "./components/footer/footer.lazy";
-import Header from "./components/header/header.lazy";
-import { homeMenu } from "./menu-items";
-import Home from "./pages/home/home.lazy";
 
 function App() {
   return (
     <div className="App">
       <Container fluid>
-        <Header items={homeMenu} />
-        <Home />
+        <BrowserRouter>
+          <Routes children={routes} />
+        </BrowserRouter>
         <Footer />
       </Container>
     </div>

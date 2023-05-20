@@ -10,13 +10,17 @@
             font-size: 60px;
             text-shadow: 1px 0 #7cb14a, -1px 0 #7cb14a, 0 1px #7cb14a, 0 -1px #7cb14a;
 
-            &:hover {
-                color: #7cb14a;
-                cursor: pointer;
-            }
+            a {
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    color: #7cb14a;
+                    cursor: pointer;
+                }
 
-            svg {
-                filter: drop-shadow(10px 10px 10px rgba(124, 177, 74, 0.5));
+                svg {
+                    filter: drop-shadow(10px 10px 10px rgba(124, 177, 74, 0.5));
+                }
             }
         }
     }

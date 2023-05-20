@@ -5,3 +5,7 @@ export const homeMenu = [
   { text: "Location", nav: "location" },
   { text: "Contact", nav: "contact" },
 ];
+
+export const programmingMenu = [];
+export const readingMenu = [];
+export const gamingMenu = [];

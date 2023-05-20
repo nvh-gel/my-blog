@@ -1,8 +1,7 @@
 import {
   faBookOpen,
-  faCode,
   faGamepad,
-  faRoute,
+  faLaptopCode,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FC } from "react";
@@ -25,20 +24,22 @@ const Intro: FC<IntroProps> = () => {
       <Container>
         <Row className="cover intro-row">
           <Col className="intro-icon">
-            <FontAwesomeIcon icon={faCode} />
-            <h3>Programing</h3>
+            <a href={`${process.env.PUBLIC_URL}/programming`}>
+              <FontAwesomeIcon icon={faLaptopCode} />
+              <h3>Programmings</h3>
+            </a>
           </Col>
           <Col className="intro-icon">
-            <FontAwesomeIcon icon={faRoute} />
-            <h3>Travel</h3>
+            <a href={`${process.env.PUBLIC_URL}/reading`}>
+              <FontAwesomeIcon icon={faBookOpen} />
+              <h3>Readings</h3>
+            </a>
           </Col>
           <Col className="intro-icon">
-            <FontAwesomeIcon icon={faBookOpen} />
-            <h3>Reading</h3>
-          </Col>
-          <Col className="intro-icon">
-            <FontAwesomeIcon icon={faGamepad} />
-            <h3>Gaming</h3>
+            <a href={`${process.env.PUBLIC_URL}/gaming`}>
+              <FontAwesomeIcon icon={faGamepad} />
+              <h3>Gamings</h3>
+            </a>
           </Col>
         </Row>
       </Container>
