@@ -21,11 +21,11 @@
         .menu-item {
             color: white;
             margin: 0px 10px;
-            z-index: 210;
+            text-transform: uppercase;
 
             &:hover {
                 background-color: white;
-                color: #7cb14a !important;
+                color: #7cb14a;
             }
         }
     }

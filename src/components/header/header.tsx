@@ -4,9 +4,16 @@ import Nav from "react-bootstrap/esm/Nav";
 import Navbar from "react-bootstrap/esm/Navbar";
 import "./header.scss";
 
-interface HeaderProps {}
+export interface HeaderProps {
+  items: MenuProps[];
+}
 
-const Header: FC<HeaderProps> = () => {
+export interface MenuProps {
+  text: string;
+  nav: string;
+}
+
+const Header: FC<HeaderProps> = ({ items }) => {
   function handleScrollTo(id: string): void {
     const element = document.getElementById(id);
     if (element) {
@@ -24,36 +31,14 @@ const Header: FC<HeaderProps> = () => {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Nav className="menu">
-              <Nav.Link
-                className="menu-item"
-                onClick={() => handleScrollTo("top")}
-              >
-                HOME
-              </Nav.Link>
-              <Nav.Link
-                className="menu-item"
-                onClick={() => handleScrollTo("service")}
-              >
-                SERVICES
-              </Nav.Link>
-              <Nav.Link
-                className="menu-item"
-                onClick={() => handleScrollTo("project")}
-              >
-                PROJECTS
-              </Nav.Link>
-              <Nav.Link
-                className="menu-item"
-                onClick={() => handleScrollTo("location")}
-              >
-                LOCATION
-              </Nav.Link>
-              <Nav.Link
-                className="menu-item"
-                onClick={() => handleScrollTo("contact")}
-              >
-                CONTACT
-              </Nav.Link>
+              {items.map((item) => (
+                <Nav.Link
+                  className="menu-item"
+                  onClick={() => handleScrollTo(item.nav)}
+                >
+                  {item.text}
+                </Nav.Link>
+              ))}
             </Nav>
           </Navbar.Collapse>
         </Navbar>
