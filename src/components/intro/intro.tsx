@@ -24,19 +24,19 @@ const Intro: FC<IntroProps> = () => {
       <Container>
         <Row className="cover intro-row">
           <Col className="intro-icon">
-            <a href={`${process.env.PUBLIC_URL}/programming`}>
+            <a href={`${process.env.PUBLIC_URL}/#/programming`}>
               <FontAwesomeIcon icon={faLaptopCode} />
               <h3>Programmings</h3>
             </a>
           </Col>
           <Col className="intro-icon">
-            <a href={`${process.env.PUBLIC_URL}/reading`}>
+            <a href={`${process.env.PUBLIC_URL}/#/reading`}>
               <FontAwesomeIcon icon={faBookOpen} />
               <h3>Readings</h3>
             </a>
           </Col>
           <Col className="intro-icon">
-            <a href={`${process.env.PUBLIC_URL}/gaming`}>
+            <a href={`${process.env.PUBLIC_URL}/#/gaming`}>
               <FontAwesomeIcon icon={faGamepad} />
               <h3>Gamings</h3>
             </a>

@@ -11,7 +11,7 @@ const News: FC<NewsProps> = (props) => (
   <div data-testid="News">
     <Carousel pause="hover">
       {props.news.map((n) => (
-        <Carousel.Item>
+        <Carousel.Item key={n.title}>
           <Image src={n.img}/>
           <div className="news-headline">
             <a href={n.url} target="_blank" rel="noreferrer">

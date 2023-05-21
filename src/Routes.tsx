@@ -5,11 +5,8 @@ import Programming from "./pages/programming/programming.lazy";
 import Reading from "./pages/reading/reading.lazy";
 
 export const routes = [
-  <Route path={`${process.env.PUBLIC_URL}/`} Component={Home} />,
-  <Route
-    path={`${process.env.PUBLIC_URL}/programming`}
-    Component={Programming}
-  />,
-  <Route path={`${process.env.PUBLIC_URL}/reading`} Component={Reading} />,
-  <Route path={`${process.env.PUBLIC_URL}/gaming`} Component={Gaming} />,
+  <Route key="/" path={`/`} Component={Home} />,
+  <Route key="/programming" path={`/programming`} Component={Programming} />,
+  <Route key="/reading" path={`/reading`} Component={Reading} />,
+  <Route key="/gaming" path={`/gaming`} Component={Gaming} />,
 ];

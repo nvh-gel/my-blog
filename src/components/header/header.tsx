@@ -33,6 +33,7 @@ const Header: FC<HeaderProps> = ({ items }) => {
             <Nav className="menu">
               {items.map((item) => (
                 <Nav.Link
+                  key={item.text}
                   className="menu-item"
                   onClick={() => handleScrollTo(item.nav)}
                 >

@@ -1,5 +1,5 @@
 import { Container } from "react-bootstrap";
-import { BrowserRouter, Routes } from "react-router-dom";
+import { HashRouter, Routes } from "react-router-dom";
 import "./App.scss";
 import { routes } from "./Routes";
 import Footer from "./components/footer/footer.lazy";
@@ -8,9 +8,9 @@ function App() {
   return (
     <div className="App">
       <Container fluid>
-        <BrowserRouter>
+        <HashRouter>
           <Routes children={routes} />
-        </BrowserRouter>
+        </HashRouter>
         <Footer />
       </Container>
     </div>
