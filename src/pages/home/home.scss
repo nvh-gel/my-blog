@@ -12,28 +12,6 @@
     }
 }
 
-.headline {
-    height: 150px;
-    line-height: 150px;
-    font-size: 35px;
-    font-weight: 400;
-    border-bottom: 4px solid #98d361;
-    border-top: 4px solid #98d361;
-
-    p {
-        text-transform: uppercase;
-    }
-}
-
-.triangle {
-    margin-left: 45.5%;
-    width: 0;
-    height: 0;
-    border-left: 60px solid transparent;
-    border-right: 60px solid transparent;
-    border-top: 45px solid #98d361;
-}
-
 .cd-container {
     width: 90%;
     max-width: 1170px;

@@ -1,11 +1,5 @@
-import {
-  faHtml5,
-  faJava
-} from "@fortawesome/free-brands-svg-icons";
-import {
-  faGears,
-  faPeopleGroup
-} from "@fortawesome/free-solid-svg-icons";
+import { faHtml5, faJava } from "@fortawesome/free-brands-svg-icons";
+import { faGears, faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import { FC } from "react";
@@ -63,7 +57,6 @@ const Service: FC<ServiceProps> = () => {
       </div>
       <div className="service">
         <Container>
-          <Row></Row>
           <Row>
             <Col>
               <div className="triangle"></div>
