@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Guildline from "../../components/guideline/guideline.lazy";
 import Header from "../../components/header/header.lazy";
 import News from "../../components/news/news.lazy";
 import Work from "../../components/work/work.lazy";
@@ -13,6 +14,7 @@ const Programming: FC<ProgrammingProps> = () => (
     <Header items={programmingMenu} />
     <News news={newsData} />
     <Work works={workData} />
+    <Guildline />
   </div>
 );
 

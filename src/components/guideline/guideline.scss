@@ -1,0 +1,25 @@
+.guide-content {
+    padding: 20px 0;
+
+    .guide-item {
+        margin: 10px 0;
+        border: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        .guide-thumbnail {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .guide-title {
+            border: none;
+            background-color: white;
+            color: #98d361;
+            font-weight: 600;
+            font-size: large;
+        }
+    }
+}

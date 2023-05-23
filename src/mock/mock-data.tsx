@@ -11,6 +11,7 @@ import {
   faGears,
   faPeopleGroup,
 } from "@fortawesome/free-solid-svg-icons";
+import GuideData from "../interface/guide";
 import NewsData from "../interface/news";
 import WorkData from "../interface/work";
 
@@ -180,5 +181,75 @@ export const workData: WorkData[] = [
     img: "https://source.unsplash.com/random/600x400/?backend",
     date: new Date("2021-12-02"),
     cat: "Python",
+  },
+];
+
+export const guideData: GuideData[] = [
+  {
+    id: 0,
+    title: "Use ChatGPT to Code a Full Stack App - Full Course",
+    img: "https://i.ytimg.com/vi/GizsSo-EevA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAHi-8hJCRyy4YPsrPIe8gJ8bAydQ",
+    hover:
+      "https://i.ytimg.com/an_webp/GizsSo-EevA/mqdefault_6s.webp?du=3000&sqp=CMCzsaMG&rs=AOn4CLDqcFq19ZuSy8adwXAIdEuW6B3nXg",
+    video: "https://www.youtube.com/embed/GizsSo-EevA",
+  },
+  {
+    id: 1,
+    title: "Scrapy Course - Python Web Scraping for Beginners",
+    img: "https://i.ytimg.com/vi/mBoX_JCKZTE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDvdELFdk_EcAwtRnF3l-VwLzTt3w",
+    hover:
+      "https://i.ytimg.com/an_webp/mBoX_JCKZTE/mqdefault_6s.webp?du=3000&sqp=CIufsaMG&rs=AOn4CLDLkv1n5uWf8HB51HnC5uRPkqTmDg",
+    video: "https://www.youtube.com/embed/mBoX_JCKZTE",
+  },
+  {
+    id: 2,
+    title: "React Router 6 - Full Course",
+    img: "https://i.ytimg.com/vi/nDGA3km5He4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDuhOSTyQ2sVUlAzEqPAIizPtTzbw",
+    hover:
+      "https://i.ytimg.com/an_webp/nDGA3km5He4/mqdefault_6s.webp?du=3000&sqp=CMqcsaMG&rs=AOn4CLALaFgR14JnLbgrZEb6glRxa8DTrg",
+    video: "https://www.youtube.com/embed/nDGA3km5He4",
+  },
+  {
+    id: 3,
+    title: "React 3D Animation Website Tutorial with ThreeJS (WebGi) & GSAP",
+    img: "https://i.ytimg.com/vi/IyBhFma4H1A/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCPdGEimZFyyU0coTr1KTKj7gz2gA",
+    hover:
+      "https://i.ytimg.com/an_webp/IyBhFma4H1A/mqdefault_6s.webp?du=3000&sqp=CODCsaMG&rs=AOn4CLCtQ20wv1BHXWFdniwZdvMf6Jpu4Q",
+    video: "https://www.youtube.com/embed/IyBhFma4H1A",
+  },
+  {
+    id: 4,
+    title: "Python Platformer Game Tutorial for Beginners",
+    img: "https://i.ytimg.com/vi/6gLeplbqtqg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCw8fBt3gWYJkErkpD5EcmANIm1HQ",
+    hover:
+      "https://i.ytimg.com/an_webp/6gLeplbqtqg/mqdefault_6s.webp?du=3000&sqp=COj-sKMG&rs=AOn4CLDxUMVr_tD5ehLOk-6PAH4QFjmQRQ",
+    video: "https://www.youtube.com/embed/6gLeplbqtqg",
+  },
+  {
+    id: 5,
+    title:
+      "Web Development with Python Tutorial - Flask & Dynamic Database-Driven Web Apps",
+    img: "https://i.ytimg.com/vi/yBDHkveJUf4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBLGLkW3R0T_WDCFh9PL6PLrkBmpw",
+    hover:
+      "https://i.ytimg.com/an_webp/yBDHkveJUf4/mqdefault_6s.webp?du=3000&sqp=CNjAsaMG&rs=AOn4CLAAbz6kIPUdaa1GWsTju8kdvvDxoA",
+    video: "https://www.youtube.com/embed/yBDHkveJUf4",
+  },
+  {
+    id: 6,
+    title:
+      "JavaScript GameDev Tutorial - Code an Animated Physics Game [Full Course]",
+    img: "https://i.ytimg.com/vi/U34l-Xz5ynU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDKoZ06yFaHErU5G3QNXIhZCzovCQ",
+    hover:
+      "https://i.ytimg.com/an_webp/U34l-Xz5ynU/mqdefault_6s.webp?du=3000&sqp=CM-bsaMG&rs=AOn4CLB_gpLH5LORR3pkg6XHYnoOvCyhGw",
+    video: "https://www.youtube.com/embed/U34l-Xz5ynU",
+  },
+  {
+    id: 7,
+    title:
+      "Build a Chat Application using React, Redux, Redux-Saga, and Web Sockets - Tutorial",
+    img: "https://i.ytimg.com/vi/x_fHXt9V3zQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAc-mLQ7Asiz8VDlt1rqRljg_Kq2A",
+    hover:
+      "https://i.ytimg.com/an_webp/x_fHXt9V3zQ/mqdefault_6s.webp?du=3000&sqp=CLy4saMG&rs=AOn4CLB0o74rgrt56D4I286ASrwwcWgh_w",
+    video: "https://www.youtube.com/embed/x_fHXt9V3zQ",
   },
 ];
