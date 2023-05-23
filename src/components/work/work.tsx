@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FC } from "react";
+import { motion } from "framer-motion";
+import { FC, useState } from "react";
 import Col from "react-bootstrap/esm/Col";
 import Container from "react-bootstrap/esm/Container";
 import Image from "react-bootstrap/esm/Image";
@@ -12,6 +13,33 @@ interface WorkProps {
 }
 
 const Work: FC<WorkProps> = (props) => {
+  const [expandedList, setExpandedList] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
+  const bookmarkVariants = {
+    closed: { backgroundColor: "#eee", top: "-10px" },
+    expanded: {
+      rotate: [0, 0, 90],
+      top: ["0px", "-30px", "-60px"],
+      left: ["-20px", "-20px", "0px"],
+      backgroundColor: "#98d361",
+    },
+  };
+  const fullContentVariants = {
+    closed: { height: "0px", display: "none" },
+    expanded: {},
+  };
+
+  function handleExpand(idx: number): void {
+    let newList = expandedList.slice();
+    newList[idx] = !newList[idx];
+    setExpandedList(newList);
+  }
+
   return (
     <div data-testid="Work">
       <div className="headline" id="works">
@@ -23,14 +51,19 @@ const Work: FC<WorkProps> = (props) => {
             <div className="triangle" />
           </Col>
         </Row>
-        {props.works.map((work: WorkData) => (
+        {props.works.map((work: WorkData, idx: number) => (
           <Row key={work.id} className="work-list">
             <Container>
               <Row className="work-overview">
                 <Col sm={1}>
-                  <div className="work-bookmark">
+                  <motion.div
+                    className="work-bookmark"
+                    animate={expandedList[idx] ? "expanded" : "closed"}
+                    variants={bookmarkVariants}
+                    onClick={() => handleExpand(idx)}
+                  >
                     <FontAwesomeIcon icon={work.icon} />
-                  </div>
+                  </motion.div>
                 </Col>
                 <Col sm={2}>
                   <div className="work-content">
@@ -46,7 +79,11 @@ const Work: FC<WorkProps> = (props) => {
                 </Col>
                 <Col sm={4}>
                   <div className="work-content">
-                    <p>{work.content.substring(0, 100)}...</p>
+                    <p>
+                      {expandedList[idx]
+                        ? ""
+                        : work.content.substring(0, 100) + "..."}
+                    </p>
                   </div>
                 </Col>
                 <Col sm={3}>
@@ -56,9 +93,14 @@ const Work: FC<WorkProps> = (props) => {
                 </Col>
               </Row>
               <Row className="work-full">
-                <Col sm={12}>
-                  <p>{work.content}</p>
-                </Col>
+                <motion.div
+                  animate={expandedList[idx] ? "expanded" : "closed"}
+                  variants={fullContentVariants}
+                >
+                  <Col sm={12}>
+                    <p>{work.content}</p>
+                  </Col>
+                </motion.div>
               </Row>
             </Container>
           </Row>
