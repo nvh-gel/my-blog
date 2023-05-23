@@ -136,11 +136,11 @@ export const workData: WorkData[] = [
     id: 0,
     title: "Lorem ipsum dolor sit amet",
     content:
-      "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>" +
-      "<p>Aenean commodo ligula eget dolor. Aenean massa.</p>" +
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.<br/>" +
+      "Aenean commodo ligula eget dolor. Aenean massa.<br/>" +
       "<span>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</span>" +
       "<div class='code'>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</div>" +
-      "<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.\nInteger tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc</p>",
+      "Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.\nInteger tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc",
     icon: faCode,
     img: "https://source.unsplash.com/random/600x400/?program",
     date: new Date(),
@@ -210,7 +210,7 @@ export const guideData: GuideData[] = [
     title: "React Router 6 - Full Course",
     img: "https://i.ytimg.com/vi/nDGA3km5He4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDuhOSTyQ2sVUlAzEqPAIizPtTzbw",
     hover:
-      "https://i.ytimg.com/an_webp/nDGA3km5He4/mqdefault_6s.webp?du=3000&sqp=CMqcsaMG&rs=AOn4CLALaFgR14JnLbgrZEb6glRxa8DTrg",
+      "https://i.ytimg.com/an_webp/nDGA3km5He4/mqdefault_6s.webp?du=3000&sqp=CKavsqMG&rs=AOn4CLDcWNSgrHO0FzdLc52ZSHqV6vnTiw",
     video: "https://www.youtube.com/embed/nDGA3km5He4",
   },
   {
@@ -226,7 +226,7 @@ export const guideData: GuideData[] = [
     title: "Python Platformer Game Tutorial for Beginners",
     img: "https://i.ytimg.com/vi/6gLeplbqtqg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCw8fBt3gWYJkErkpD5EcmANIm1HQ",
     hover:
-      "https://i.ytimg.com/an_webp/6gLeplbqtqg/mqdefault_6s.webp?du=3000&sqp=COj-sKMG&rs=AOn4CLDxUMVr_tD5ehLOk-6PAH4QFjmQRQ",
+      "https://i.ytimg.com/an_webp/6gLeplbqtqg/mqdefault_6s.webp?du=3000&sqp=CNigsqMG&rs=AOn4CLDywGfpyrs5O92v4n4i_99TSnnzrg",
     video: "https://www.youtube.com/embed/6gLeplbqtqg",
   },
   {
@@ -244,7 +244,7 @@ export const guideData: GuideData[] = [
       "JavaScript GameDev Tutorial - Code an Animated Physics Game [Full Course]",
     img: "https://i.ytimg.com/vi/U34l-Xz5ynU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDKoZ06yFaHErU5G3QNXIhZCzovCQ",
     hover:
-      "https://i.ytimg.com/an_webp/U34l-Xz5ynU/mqdefault_6s.webp?du=3000&sqp=CM-bsaMG&rs=AOn4CLB_gpLH5LORR3pkg6XHYnoOvCyhGw",
+      "https://i.ytimg.com/an_webp/U34l-Xz5ynU/mqdefault_6s.webp?du=3000&sqp=CJ7UsqMG&rs=AOn4CLCkqP6E2La758wWqbwL7KEKukibbw",
     video: "https://www.youtube.com/embed/U34l-Xz5ynU",
   },
   {
