@@ -1,55 +1,15 @@
-import { faHtml5, faJava } from "@fortawesome/free-brands-svg-icons";
-import { faGears, faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import { FC } from "react";
 import Col from "react-bootstrap/esm/Col";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
+import { serviceData } from "../../mock/mock-data";
 import "./service.scss";
 
 interface ServiceProps {}
 
 const Service: FC<ServiceProps> = () => {
-  const items = [
-    {
-      title: "Backend",
-      content: [
-        "Experienced in Java, SpringMVC, Spring Boot, Hibernate ORM.",
-        "Experienced in Python and Python framework: Django, Flask.",
-        "Experienced in managing, improving and optimizing SQL databases and queries.",
-        "Experienced in bug tracking and tracing in Logstash and Kibana.",
-      ],
-      icon: faJava,
-    },
-    {
-      title: "Frontend",
-      content: [
-        "Familiar with front end development by HTML and CSS.",
-        "Has experience developing frontend site using ReactJS and React Typescript",
-        "Familiar with developing frontend site using Angular framework.",
-      ],
-      icon: faHtml5,
-    },
-    {
-      title: "Software engineer",
-      content: [
-        "Familiar with software development methodology, i.e Agile, Scrum.",
-        "Participated in previous development teams as Scrum Master, Team Leader",
-      ],
-      icon: faPeopleGroup,
-    },
-    {
-      title: "Devops",
-      content: [
-        "Familiar with Docker and Kubernetes",
-        "Familiar with CD/CI tools for development: Git, Subversion, Jenkins, SonarQube",
-        "Familiar with bug tracking configuration and report using JIRA",
-      ],
-      icon: faGears,
-    },
-  ];
-
   return (
     <div id="service">
       <div className="headline">
@@ -65,7 +25,7 @@ const Service: FC<ServiceProps> = () => {
           <Row>
             <Col>
               <section id="cd-timeline-service" className="cd-container">
-                {items.map((item) => (
+                {serviceData.map((item) => (
                   <div className="cd-timeline-block" key={item.title}>
                     <motion.div
                       className="cd-timeline-img"
@@ -79,7 +39,7 @@ const Service: FC<ServiceProps> = () => {
                     <motion.div
                       className="cd-timeline-content service-box-content"
                       initial={{
-                        x: items.indexOf(item) % 2 === 0 ? -100 : 100,
+                        x: serviceData.indexOf(item) % 2 === 0 ? -100 : 100,
                         opacity: 0,
                       }}
                       whileInView={{ x: 0, opacity: 1 }}
