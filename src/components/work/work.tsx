@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
+import parse from "html-react-parser";
 import { FC, useState } from "react";
 import Col from "react-bootstrap/esm/Col";
 import Container from "react-bootstrap/esm/Container";
@@ -82,7 +83,7 @@ const Work: FC<WorkProps> = (props) => {
                     <p>
                       {expandedList[idx]
                         ? ""
-                        : work.content.substring(0, 100) + "..."}
+                        : parse(work.content.substring(0, 100) + "...")}
                     </p>
                   </div>
                 </Col>
@@ -92,16 +93,14 @@ const Work: FC<WorkProps> = (props) => {
                   </div>
                 </Col>
               </Row>
-              <Row className="work-full">
-                <motion.div
-                  animate={expandedList[idx] ? "expanded" : "closed"}
-                  variants={fullContentVariants}
-                >
-                  <Col sm={12}>
-                    <p>{work.content}</p>
-                  </Col>
-                </motion.div>
-              </Row>
+              <motion.div
+                animate={expandedList[idx] ? "expanded" : "closed"}
+                variants={fullContentVariants}
+              >
+                <Row className="work-full">
+                  <Col sm={12}>{parse(work.content)}</Col>
+                </Row>
+              </motion.div>
             </Container>
           </Row>
         ))}

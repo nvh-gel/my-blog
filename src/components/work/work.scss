@@ -73,5 +73,19 @@
         text-align: left;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
+
+        p {
+            margin: 5px 0;
+        }
+
+        span {
+            color: blue;
+            margin: 5px 0;
+        }
+
+        .code {
+            background-color: #ddd;
+            padding: 5px;
+        }
     }
 }
