@@ -12,7 +12,7 @@ const Location: FC<LocationProps> = () => {
     lat: 10.7750679,
     lng: 106.6429372,
   };
-  const zoomLevel = 14;
+  const zoomLevel = 15;
   const apiKey = process.env.REACT_APP_GOOGLE_API_KEY || "";
 
   function renderMarkers(map: any, maps: any) {
