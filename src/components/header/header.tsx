@@ -18,7 +18,7 @@ const Header: FC<HeaderProps> = ({ items }) => {
   }
 
   return (
-    <div className="header" id="top">
+    <div className="header">
       <Row justify="center">
         <Col span={5}>
           <Link className="logo" href={process.env.PUBLIC_URL}>

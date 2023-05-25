@@ -1,7 +1,7 @@
 import { MenuItemType } from "antd/es/menu/hooks/useItems";
 
 export const homeMenu = [
-  { label: "Home", key: "top" },
+  { label: "Home", key: "intro" },
   { label: "Services", key: "service" },
   { label: "Projects", key: "project" },
   { label: "Location", key: "location" },
@@ -9,7 +9,7 @@ export const homeMenu = [
 ];
 
 export const programmingMenu: MenuItemType[] = [
-  { label: "News", key: "top" },
+  { label: "News", key: "news" },
   { label: "Works", key: "works" },
   { label: "Practices", key: "practices" },
 ];

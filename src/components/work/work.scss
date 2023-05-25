@@ -9,7 +9,7 @@
         align-items: center;
         height: 180px;
         margin: 20px 0;
-        border-top-left-radius: 5px;
+        border-top-left-radius: 50px;
         border-top-right-radius: 5px;
         padding: 0;
 
@@ -28,7 +28,7 @@
 
             &:hover {
                 cursor: pointer;
-                background-color: #98d361;
+                background-color: #98d361 !important;
             }
             svg {
                 font-size: 24px;
@@ -37,6 +37,8 @@
 
         .work-content {
             padding-right: 0;
+            font-family: "Dosis";
+            font-size: 16px;
             .tag {
                 font-size: 18px;
                 font-weight: 500;
@@ -55,6 +57,7 @@
         }
 
         .work-thumbnail {
+            text-align: center;
             img {
                 position: relative;
                 top: -10px;
@@ -72,20 +75,23 @@
         padding-top: 20px;
         text-align: left;
         border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
+        border-bottom-right-radius: 50px;
 
         p {
-            margin: 5px 0;
-        }
+            margin: 10px;
+            font-family: "Dosis";
+            font-size: 16px;
+            line-height: 24px;
 
-        span {
-            color: blue;
-            margin: 5px 0;
-        }
+            span {
+                color: blue;
+            }
 
-        .code {
-            background-color: #ddd;
-            padding: 5px;
+            .code {
+                font-family: "Courier New", Courier, monospace;
+                background-color: #ddd;
+                padding: 5px;
+            }
         }
     }
 }

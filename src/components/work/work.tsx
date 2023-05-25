@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Col, Image, Row, Space } from "antd";
+import { Col, Image, Row } from "antd";
 import { motion } from "framer-motion";
 import parse from "html-react-parser";
 import { FC, useState } from "react";
@@ -43,65 +43,65 @@ const Work: FC<WorkProps> = (props) => {
       <div className="headline" id="works">
         <p>Recent Works</p>
       </div>
-      <Space>
-        <Row>
-          <Col>
-            <div className="triangle" />
-          </Col>
-        </Row>
-        {props.works.map((work: WorkData, idx: number) => (
-          <Row key={work.id} className="work-list">
-            <Space>
-              <Row className="work-overview">
-                <Col sm={1}>
-                  <motion.div
-                    className="work-bookmark"
-                    animate={expandedList[idx] ? "expanded" : "closed"}
-                    variants={bookmarkVariants}
-                    onClick={() => handleExpand(idx)}
-                  >
-                    <FontAwesomeIcon icon={work.icon} />
-                  </motion.div>
-                </Col>
-                <Col sm={2}>
-                  <div className="work-content">
-                    <div className="tag">{work.cat}</div>
-                    <h3>{work.title}</h3>
-                  </div>
-                </Col>
-                <Col sm={2}>
-                  <div className="work-content">
-                    <h3>Date</h3>
-                    <p>{work.date.toDateString()}</p>
-                  </div>
-                </Col>
-                <Col sm={4}>
-                  <div className="work-content">
-                    <p>
-                      {expandedList[idx]
-                        ? ""
-                        : parse(work.content.substring(0, 100) + "...")}
-                    </p>
-                  </div>
-                </Col>
-                <Col sm={3}>
-                  <div className="work-thumbnail">
-                    <Image src={work.img} />
-                  </div>
+      <Row justify="center">
+        <Col>
+          <div className="triangle" />
+        </Col>
+      </Row>
+      {props.works.map((work: WorkData, idx: number) => (
+        <Row key={work.id} className="work-list" justify="center">
+          <Col span={20}>
+            <Row className="work-overview">
+              <Col sm={2}>
+                <motion.div
+                  className="work-bookmark"
+                  animate={expandedList[idx] ? "expanded" : "closed"}
+                  variants={bookmarkVariants}
+                  onClick={() => handleExpand(idx)}
+                >
+                  <FontAwesomeIcon icon={work.icon} />
+                </motion.div>
+              </Col>
+              <Col sm={5}>
+                <div className="work-content">
+                  <div className="tag">{work.cat}</div>
+                  <h3>{work.title}</h3>
+                </div>
+              </Col>
+              <Col sm={3}>
+                <div className="work-content">
+                  <h3>Date</h3>
+                  <p>{work.date.toDateString()}</p>
+                </div>
+              </Col>
+              <Col sm={8}>
+                <div className="work-content">
+                  <p>
+                    {expandedList[idx]
+                      ? ""
+                      : parse(work.content.substring(0, 100) + "...")}
+                  </p>
+                </div>
+              </Col>
+              <Col sm={6}>
+                <div className="work-thumbnail">
+                  <Image src={work.img} loading="lazy" preview={false} />
+                </div>
+              </Col>
+            </Row>
+            <motion.div
+              animate={expandedList[idx] ? "expanded" : "closed"}
+              variants={fullContentVariants}
+            >
+              <Row className="work-full">
+                <Col span={24}>
+                  <p>{parse(work.content)}</p>
                 </Col>
               </Row>
-              <motion.div
-                animate={expandedList[idx] ? "expanded" : "closed"}
-                variants={fullContentVariants}
-              >
-                <Row className="work-full">
-                  <Col sm={12}>{parse(work.content)}</Col>
-                </Row>
-              </motion.div>
-            </Space>
-          </Row>
-        ))}
-      </Space>
+            </motion.div>
+          </Col>
+        </Row>
+      ))}
     </div>
   );
 };

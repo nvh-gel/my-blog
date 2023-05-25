@@ -10,7 +10,7 @@ interface NewsProps {
 
 const News: FC<NewsProps> = (props) => (
   <div data-testid="News">
-    <Row justify="center" className="news">
+    <Row justify="center" className="news" id="news">
       <Col span={20}>
         <Carousel
           slidesToShow={3}
