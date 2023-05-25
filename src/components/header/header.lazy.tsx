@@ -1,11 +1,11 @@
+import { MenuItemType } from "antd/es/menu/hooks/useItems";
 import React, { lazy, Suspense } from "react";
-import { MenuProps } from "./header";
 
 const LazyHeader = lazy(() => import("./header"));
 
 const Header = (
   props: JSX.IntrinsicAttributes & { children?: React.ReactNode } & {
-    items: MenuProps[];
+    items: MenuItemType[];
   }
 ) => (
   <Suspense fallback={null}>

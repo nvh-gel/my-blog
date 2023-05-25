@@ -1,9 +1,7 @@
 import { FC } from "react";
-import Carousel from "react-bootstrap/esm/Carousel";
-import Container from "react-bootstrap/esm/Container";
-import Image from "react-bootstrap/esm/Image";
 import NewsData from "../../interface/news";
 import "./news.scss";
+import { Carousel, Space } from "antd";
 
 interface NewsProps {
   news: NewsData[];
@@ -11,10 +9,9 @@ interface NewsProps {
 
 const News: FC<NewsProps> = (props) => (
   <div data-testid="News">
-    <Container>
-      <Carousel pause="hover">
-        {props.news.map((n) => (
-          <Carousel.Item key={n.title}>
+    <Space>
+      <Carousel>
+        {/* {props.news.map((n) => (
             <Image src={n.img} />
             <div className="news-headline">
               <a href={n.url} target="_blank" rel="noreferrer">
@@ -22,10 +19,9 @@ const News: FC<NewsProps> = (props) => (
               </a>
               <p>{n.content}</p>
             </div>
-          </Carousel.Item>
-        ))}
+        ))} */}
       </Carousel>
-    </Container>
+    </Space>
   </div>
 );
 

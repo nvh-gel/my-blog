@@ -1,5 +1,5 @@
-@use './media-query.scss' as *;
-@use "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@use "./media-query.scss" as *;
+@use "../node_modules/antd/dist/reset.css";
 @import url(https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800);
 
 body {
@@ -19,12 +19,11 @@ body {
   border-top: 4px solid #98d361;
 
   p {
-      text-transform: uppercase;
+    text-transform: uppercase;
   }
 }
 
 .triangle {
-  margin-left: 45.5%;
   width: 0;
   height: 0;
   border-left: 60px solid transparent;

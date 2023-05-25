@@ -1,13 +1,8 @@
 import React from "react";
-import Card from "react-bootstrap/esm/Card";
-import Col from "react-bootstrap/esm/Col";
-import Container from "react-bootstrap/esm/Container";
-import Image from "react-bootstrap/esm/Image";
-import Modal from "react-bootstrap/esm/Modal";
-import Row from "react-bootstrap/esm/Row";
 import GuideData from "../../interface/guide";
 import { guideData } from "../../mock/mock-data";
 import "./guideline.scss";
+import { Card, Col, Modal, Row, Space } from "antd";
 
 interface GuidelineProps {}
 
@@ -53,23 +48,7 @@ class Guideline extends React.Component<GuidelineProps, GuidelineState> {
         <div className="headline" id="practices">
           <p>Coding Practices</p>
         </div>
-        <Container>
-          <Modal show={this.state.showCurrentWatch} size="xl">
-            <Modal.Header closeButton onClick={this.handleClose}>
-              <Modal.Title>{this.state.currentWatch?.title}</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <Container>
-                <iframe
-                  className="video-player"
-                  src={this.state.currentWatch?.video}
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
-              </Container>
-            </Modal.Body>
-          </Modal>
+        <Space>
           <Row>
             <Col>
               <div className="triangle" />
@@ -82,7 +61,7 @@ class Guideline extends React.Component<GuidelineProps, GuidelineState> {
                   className="guide-item"
                   onClick={() => this.handleWatch(guide)}
                 >
-                  <Card.Body style={{ padding: 0 }}>
+                  {/* <Card.Body style={{ padding: 0 }}>
                     <Image
                       src={guide.img}
                       className="guide-thumbnail"
@@ -96,12 +75,12 @@ class Guideline extends React.Component<GuidelineProps, GuidelineState> {
                   </Card.Body>
                   <Card.Footer className="guide-title">
                     {guide.title}
-                  </Card.Footer>
+                  </Card.Footer> */}
                 </Card>
               </Col>
             ))}
           </Row>
-        </Container>
+        </Space>
       </div>
     );
   }

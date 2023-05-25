@@ -96,7 +96,7 @@ export const projectData = [
     ],
   },
   {
-    title: "Business Monitoring",
+    title: "BUSINESS MONITORING",
     date: "Apr 2016 - Mar 2018",
     img: "https://source.unsplash.com/random/600x400/?dashboard",
     role: "Developer",

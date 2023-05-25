@@ -1,6 +1,5 @@
 .project-cover {
     height: 200px;
-    line-height: 200px;
 }
 
 #cd-timeline-project {
@@ -20,7 +19,6 @@
     }
 
     .cd-timeline-block {
-
         @media only screen and (min-width: 1170px) {
             margin: -5em 0 0 0;
         }
@@ -48,12 +46,13 @@
 
             .project-content {
                 position: absolute;
-                z-index: 999;
+                z-index: 500;
                 background-color: #eee;
                 opacity: 0.5;
                 top: 0;
                 left: 0;
                 width: 100%;
+                font-family: "Dosis";
 
                 h2 {
                     padding-top: 15px;
@@ -74,12 +73,13 @@
 
             .project-desc {
                 position: absolute;
-                z-index: 999;
+                z-index: 500;
                 background-color: #eee;
                 opacity: 0.8;
                 bottom: 0;
                 left: 0;
                 width: 100%;
+                font-family: "Dosis";
 
                 b {
                     font-size: 15px;

@@ -1,15 +1,17 @@
+import { MenuItemType } from "antd/es/menu/hooks/useItems";
+
 export const homeMenu = [
-  { text: "Home", nav: "top" },
-  { text: "Services", nav: "service" },
-  { text: "Projects", nav: "project" },
-  { text: "Location", nav: "location" },
-  { text: "Contact", nav: "contact" },
+  { label: "Home", key: "top" },
+  { label: "Services", key: "service" },
+  { label: "Projects", key: "project" },
+  { label: "Location", key: "location" },
+  { label: "Contact", key: "contact" },
 ];
 
-export const programmingMenu = [
-  { text: "News", nav: "top" },
-  { text: "Works", nav: "works" },
-  { text: "Practices", nav: "practices" },
+export const programmingMenu: MenuItemType[] = [
+  { label: "News", key: "top" },
+  { label: "Works", key: "works" },
+  { label: "Practices", key: "practices" },
 ];
 export const readingMenu = [];
 export const gamingMenu = [];

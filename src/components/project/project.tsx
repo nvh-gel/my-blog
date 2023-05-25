@@ -1,9 +1,8 @@
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Image, Row, Space } from "antd";
 import { motion } from "framer-motion";
 import { FC } from "react";
-import Container from "react-bootstrap/esm/Container";
-import Image from "react-bootstrap/esm/Image";
 import { projectData } from "../../mock/mock-data";
 import "./project.scss";
 
@@ -15,16 +14,22 @@ const Project: FC<ProjectProps> = () => {
   return (
     <div id="project">
       <div style={{ backgroundImage: `url(${image})` }}>
-        <Container className="cover project-cover">
+        <Space
+          className="cover project-cover"
+          direction="vertical"
+          align="center"
+        >
           <h2>Projects</h2>
           <h3>What we have done</h3>
-        </Container>
+        </Space>
       </div>
       <div className="headline">
         <p>Latest work</p>
       </div>
-      <Container>
+      <Row justify="center">
         <div className="triangle" />
+      </Row>
+      <Row justify="center">
         <section id="cd-timeline-project" className="cd-container">
           {projectData.map((project, id) => (
             <div className="cd-timeline-block" key={project.title}>
@@ -44,7 +49,7 @@ const Project: FC<ProjectProps> = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <Image src={project.img} />
+                <Image src={project.img} loading="lazy"/>
                 <div className="project-content">
                   <h2>{project.title}</h2>
                   <p>{project.date}</p>
@@ -58,7 +63,7 @@ const Project: FC<ProjectProps> = () => {
             </div>
           ))}
         </section>
-      </Container>
+      </Row>
     </div>
   );
 };

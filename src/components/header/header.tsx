@@ -1,21 +1,17 @@
+import { Col, Menu, Row } from "antd";
+import { MenuItemType } from "antd/es/menu/hooks/useItems";
+import Link from "antd/es/typography/Link";
+import { MenuInfo } from "rc-menu/lib/interface";
 import { FC } from "react";
-import Container from "react-bootstrap/esm/Container";
-import Nav from "react-bootstrap/esm/Nav";
-import Navbar from "react-bootstrap/esm/Navbar";
 import "./header.scss";
 
 export interface HeaderProps {
-  items: MenuProps[];
-}
-
-export interface MenuProps {
-  text: string;
-  nav: string;
+  items: MenuItemType[];
 }
 
 const Header: FC<HeaderProps> = ({ items }) => {
-  function handleScrollTo(id: string): void {
-    const element = document.getElementById(id);
+  function handleScrollTo(item: MenuInfo): void {
+    const element = document.getElementById(item.key);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -23,27 +19,21 @@ const Header: FC<HeaderProps> = ({ items }) => {
 
   return (
     <div className="header" id="top">
-      <Container>
-        <Navbar collapseOnSelect expand="lg" fixed="top" className="navbar">
-          <Navbar.Brand className="logo" href={process.env.PUBLIC_URL}>
+      <Row justify="center">
+        <Col span={5}>
+          <Link className="logo" href={process.env.PUBLIC_URL}>
             <span>E</span>den
-          </Navbar.Brand>
-          <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end">
-            <Nav className="menu">
-              {items.map((item) => (
-                <Nav.Link
-                  key={item.text}
-                  className="menu-item"
-                  onClick={() => handleScrollTo(item.nav)}
-                >
-                  {item.text}
-                </Nav.Link>
-              ))}
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-      </Container>
+          </Link>
+        </Col>
+        <Col span={14}>
+          <Menu
+            mode="horizontal"
+            items={items}
+            className="navbar"
+            onClick={(item) => handleScrollTo(item)}
+          />
+        </Col>
+      </Row>
     </div>
   );
 };

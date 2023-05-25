@@ -1,15 +1,11 @@
+import { Button, Col, Form, Input, Row } from "antd";
 import { FC } from "react";
-import { Button } from "react-bootstrap";
-import Col from "react-bootstrap/esm/Col";
-import Container from "react-bootstrap/esm/Container";
-import Form from "react-bootstrap/esm/Form";
-import Row from "react-bootstrap/esm/Row";
 import "./contact.scss";
+import TextArea from "antd/es/input/TextArea";
 
 interface ContactProps {}
 
 const Contact: FC<ContactProps> = () => {
-
   function handleSend(e: any): void {
     e.preventDefault();
     alert("Function is not yet implemented, please return to it later.");
@@ -20,68 +16,62 @@ const Contact: FC<ContactProps> = () => {
       <div className="headline">
         <p>Send us a message</p>
       </div>
-      <Container>
+      <Row justify="center">
         <div className="triangle" />
-        <Row>
-          <Col sm={8}>
-            <Form className="contact-form">
-              <Row>
-                <Col className="input-name col-md-4">
-                  <Form.Control placeholder="Name" name="name" />
-                </Col>
-                <Col className="input-email col-md-4">
-                  <Form.Control type="email" placeholder="Email" name="name" />
-                </Col>
-                <Col className="input-subject col-md-4">
-                  <Form.Control placeholder="Subject" name="subject" />
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Form.Control
-                    as="textarea"
-                    rows={8}
-                    name="message"
-                    placeholder="Message"
-                  />
-                </Col>
-              </Row>
-              <Button
-                className="send-button"
-                type="submit"
-                onClick={handleSend}
-              >
-                SEND NOW
-              </Button>
-            </Form>
-          </Col>
-          <Col sm={4}>
-            <div className="about">
-              <h4>More about us!</h4>
-              <p>
-                We can be reached through email our phone number via submitting
-                email, call or message to
-              </p>
-              <p>
-                <b>Mailing Address: </b>
-                <i>
-                  Lac Long Quan Street, Tan Binh District, Ho Chi Minh City,
-                  Vietnam
-                </i>
-              </p>
-              <p>
-                <b>Tel: </b>
-                <i>+84776798665</i>
-              </p>
-              <p>
-                <b>Email: </b>
-                <i>nvhien2703@outlook.com</i>
-              </p>
-              <p>Looking forward to a chance to work with you.</p>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+      </Row>
+      <Row justify="center">
+        <Col sm={14}>
+          <Form className="contact-form">
+            <Row justify="space-between">
+              <Col span={7}>
+                <Input placeholder="Name" name="name" />
+              </Col>
+              <Col span={7}>
+                <Input type="email" placeholder="Email" name="name" />
+              </Col>
+              <Col span={7}>
+                <Input placeholder="Subject" name="subject" />
+              </Col>
+            </Row>
+            <Row>
+              <TextArea placeholder="Message" rows={7}/>
+            </Row>
+            <Button
+              className="send-button"
+              htmlType="submit"
+              onClick={handleSend}
+              size="large"
+            >
+              SEND NOW
+            </Button>
+          </Form>
+        </Col>
+        <Col sm={6}>
+          <div className="about">
+            <h3>More about us!</h3>
+            <p>
+              We can be reached through email our phone number via submitting
+              email, call or message to
+            </p>
+            <p>
+              <b>Mailing Address: </b>
+              <i>
+                Lac Long Quan Street, Tan Binh District, Ho Chi Minh City,
+                Vietnam
+              </i>
+            </p>
+            <p>
+              <b>Tel: </b>
+              <i>+84776798665</i>
+            </p>
+            <p>
+              <b>Email: </b>
+              <i>nvhien2703@outlook.com</i>
+            </p>
+            <p>Looking forward to a chance to work with you.</p>
+          </div>
+        </Col>
+      </Row>
     </div>
   );
 };

@@ -1,10 +1,12 @@
 .contact-form {
     margin: 60px 15px 60px 15px;
 
-    .row {
+    .ant-row {
         margin-bottom: 20px;
 
-        input, textarea {
+        input,
+        textarea {
+            font-family: "Dosis";
             border-color: #eee;
             border-width: 3px;
             &:focus {
@@ -19,15 +21,25 @@
         background-color: #98d361;
         border-color: white;
         border-radius: 0;
+        font-family: "Dosis";
+        color: white;
+        font-size: 18px;
         width: 25%;
+
+        &:hover {
+            border-color: #eee;
+            color: white;
+        }
     }
 }
 
 .about {
     margin: 60px 15px 60px 15px;
     text-align: left;
+    font-family: "Dosis";
+    font-size: 16px;
 
-    h4 {
+    h3 {
         text-transform: uppercase;
     }
 }

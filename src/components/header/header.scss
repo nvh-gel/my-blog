@@ -1,10 +1,20 @@
 .header {
     background-color: #98d361;
+    position: fixed;
+    width: 100%;
+    z-index: 900;
+
     .logo {
+        float: left;
         font-size: 30px;
         font-weight: 600;
         color: white;
         text-transform: uppercase;
+        font-family: "Dosis";
+
+        &:hover {
+            color: white;
+        }
 
         span {
             font-size: 36px;
@@ -12,22 +22,28 @@
     }
 
     .navbar {
-        padding: 0px 125px;
         background-color: #98d361;
         height: 60px;
         line-height: 60px;
+        float: right;
 
-        .menu-item {
+        .ant-menu-item {
             color: white;
             margin: 0px;
             padding: 0px 20px;
             height: 100%;
             text-transform: uppercase;
             font-weight: 500;
+            font-family: "Dosis";
+            font-size: 18px;
 
             &:hover {
                 background-color: white;
-                color: #7cb14a;
+                color: #7cb14a !important;
+            }
+
+            &::after {
+                border-bottom: none;
             }
         }
     }

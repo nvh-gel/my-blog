@@ -1,11 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Col, Image, Row, Space } from "antd";
 import { motion } from "framer-motion";
 import parse from "html-react-parser";
 import { FC, useState } from "react";
-import Col from "react-bootstrap/esm/Col";
-import Container from "react-bootstrap/esm/Container";
-import Image from "react-bootstrap/esm/Image";
-import Row from "react-bootstrap/esm/Row";
 import WorkData from "../../interface/work";
 import "./work.scss";
 
@@ -46,7 +43,7 @@ const Work: FC<WorkProps> = (props) => {
       <div className="headline" id="works">
         <p>Recent Works</p>
       </div>
-      <Container>
+      <Space>
         <Row>
           <Col>
             <div className="triangle" />
@@ -54,7 +51,7 @@ const Work: FC<WorkProps> = (props) => {
         </Row>
         {props.works.map((work: WorkData, idx: number) => (
           <Row key={work.id} className="work-list">
-            <Container>
+            <Space>
               <Row className="work-overview">
                 <Col sm={1}>
                   <motion.div
@@ -101,10 +98,10 @@ const Work: FC<WorkProps> = (props) => {
                   <Col sm={12}>{parse(work.content)}</Col>
                 </Row>
               </motion.div>
-            </Container>
+            </Space>
           </Row>
         ))}
-      </Container>
+      </Space>
     </div>
   );
 };
