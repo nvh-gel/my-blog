@@ -95,7 +95,7 @@ const Work: FC<WorkProps> = (props) => {
             >
               <Row className="work-full">
                 <Col span={24}>
-                  <p>{parse(work.content)}</p>
+                  {parse(work.content)}
                 </Col>
               </Row>
             </motion.div>

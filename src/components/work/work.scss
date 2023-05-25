@@ -72,26 +72,22 @@
     .work-full {
         background-color: #98d3617d;
         margin: -20px 0 0 0;
-        padding-top: 20px;
         text-align: left;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 50px;
+        font-family: "Dosis";
+        font-size: 16px;
+        line-height: 24px;
+        padding: 10px;
 
-        p {
-            margin: 10px;
-            font-family: "Dosis";
-            font-size: 16px;
-            line-height: 24px;
+        span {
+            color: blue;
+        }
 
-            span {
-                color: blue;
-            }
-
-            .code {
-                font-family: "Courier New", Courier, monospace;
-                background-color: #ddd;
-                padding: 5px;
-            }
+        .code {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #ddd;
+            padding: 5px;
         }
     }
 }

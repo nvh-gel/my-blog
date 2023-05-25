@@ -3,7 +3,7 @@ import Header from "../../components/header/header.lazy";
 import News from "../../components/news/news.lazy";
 import Practice from "../../components/practice/Practice.lazy";
 import Work from "../../components/work/work.lazy";
-import { programmingMenu } from "../../menu-items";
+import { programmingMenu } from "../../configs/menu-items";
 import { newsData, workData } from "../../mock/mock-data";
 import "./programming.scss";
 

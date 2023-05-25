@@ -1,8 +1,8 @@
 import { Route } from "react-router-dom";
-import Gaming from "./pages/gaming/gaming.lazy";
-import Home from "./pages/home/home.lazy";
-import Programming from "./pages/programming/programming.lazy";
-import Reading from "./pages/reading/reading.lazy";
+import Gaming from "../pages/gaming/gaming.lazy";
+import Home from "../pages/home/home.lazy";
+import Programming from "../pages/programming/programming.lazy";
+import Reading from "../pages/reading/reading.lazy";
 
 export const routes = [
   <Route key="/" path={`/`} Component={Home} />,

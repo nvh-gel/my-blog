@@ -5,7 +5,7 @@ import Intro from "../../components/intro/intro.lazy";
 import Location from "../../components/location/location.lazy";
 import Project from "../../components/project/project.lazy";
 import Service from "../../components/service/service.lazy";
-import { homeMenu } from "../../menu-items";
+import { homeMenu } from "../../configs/menu-items";
 import "./home.scss";
 
 interface HomeProps {}
