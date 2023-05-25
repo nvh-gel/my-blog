@@ -11,7 +11,7 @@ import {
   faGears,
   faPeopleGroup,
 } from "@fortawesome/free-solid-svg-icons";
-import GuideData from "../interface/guide";
+import PracticeData from "../interface/practice";
 import NewsData from "../interface/news";
 import WorkData from "../interface/work";
 
@@ -198,7 +198,7 @@ export const workData: WorkData[] = [
   },
 ];
 
-export const guideData: GuideData[] = [
+export const practiceData: PracticeData[] = [
   {
     id: 0,
     title: "Use ChatGPT to Code a Full Stack App - Full Course",

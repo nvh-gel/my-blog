@@ -1,4 +1,4 @@
-export default interface GuideData {
+export default interface PracticeData {
     id: number;
     title: string;
     img: string;
