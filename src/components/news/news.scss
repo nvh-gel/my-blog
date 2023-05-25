@@ -1,34 +1,39 @@
-.carousel {
+.news {
+    padding-top: 60px;
     height: 600px;
 
-    .carousel-inner {
-        height: 100%;
-        .carousel-item {
-            height: 100%;
+    .carousel-item {
+        height: 600px;
+        text-align: left;
+        border-left: white solid 4px;
+        border-right: white solid 4px;
 
-            img {
-                width: 100%;
-                height: 100%;
-            }
+        img {
+            height: 600px;
+        }
+        .overlay {
+            width: 25%;
+            height: 25%;
+            background-color: #dddddd83;
+            z-index: 999;
+            position: absolute;
+            bottom: 0;
+            padding: 5px;
+            text-align: center;
 
-            .news-headline {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                height: 25%;
-                background-color: rgba(128, 128, 128, 0.5);
-                text-align: left;
-                padding: 1% 5% 5% 5%;
-                a {
-                    text-decoration: none;
-                    h2 {
-                        color: white;
+            a {
+                font-family: "Dosis";
+                font-size: 16px;
+                text-decoration: none;
+                color: black;
+
+                &:hover {
+                    h3 {
+                        color: #7cb14a;
                     }
-                }
-                p {
-                    color: white;
                 }
             }
         }
     }
+    margin-bottom: 200px;
 }

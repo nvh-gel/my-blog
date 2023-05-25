@@ -1,10 +1,8 @@
 import { FC } from "react";
-import Guildline from "../../components/guideline/guideline.lazy";
 import Header from "../../components/header/header.lazy";
 import News from "../../components/news/news.lazy";
-import Work from "../../components/work/work.lazy";
 import { programmingMenu } from "../../menu-items";
-import { newsData, workData } from "../../mock/mock-data";
+import { newsData } from "../../mock/mock-data";
 import "./programming.scss";
 
 interface ProgrammingProps {}
@@ -13,8 +11,8 @@ const Programming: FC<ProgrammingProps> = () => (
   <div data-testid="Programming">
     <Header items={programmingMenu} />
     <News news={newsData} />
-    <Work works={workData} />
-    <Guildline />
+    {/* <Work works={workData} /> */}
+    {/* <Guildline /> */}
   </div>
 );
 

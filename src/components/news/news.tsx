@@ -1,7 +1,8 @@
+import { Carousel, Col, Image, Row, Space } from "antd";
+import Link from "antd/es/typography/Link";
 import { FC } from "react";
 import NewsData from "../../interface/news";
 import "./news.scss";
-import { Carousel, Space } from "antd";
 
 interface NewsProps {
   news: NewsData[];
@@ -9,19 +10,28 @@ interface NewsProps {
 
 const News: FC<NewsProps> = (props) => (
   <div data-testid="News">
-    <Space>
-      <Carousel>
-        {/* {props.news.map((n) => (
-            <Image src={n.img} />
-            <div className="news-headline">
-              <a href={n.url} target="_blank" rel="noreferrer">
-                <h2>{n.title}</h2>
-              </a>
-              <p>{n.content}</p>
-            </div>
-        ))} */}
-      </Carousel>
-    </Space>
+    <Row justify="center" className="news">
+      <Col span={20}>
+        <Carousel
+          slidesToShow={3}
+          prefixCls="carousel-item"
+          infinite={false}
+          dotPosition="top"
+        >
+          {props.news.map((n) => (
+            <Space className="carousel-item" key={n.id}>
+              <Image src={n.img} preview={false} />
+              <Space className="overlay" direction="vertical">
+                <Link href={n.url} target="_blank">
+                  <h3>{n.title}</h3>
+                  <p>{n.content.substring(0, 100) + "..."}</p>
+                </Link>
+              </Space>
+            </Space>
+          ))}
+        </Carousel>
+      </Col>
+    </Row>
   </div>
 );
 
