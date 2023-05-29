@@ -13,8 +13,12 @@ export const programmingMenu: MenuItemType[] = [
   { label: "Works", key: "works" },
   { label: "Practices", key: "practices" },
 ];
+
 export const readingMenu = [
   { label: "Quote", key: "quote" },
-  { label: "Review", key: "reviews" },
+  { label: "Reviews", key: "reviews" },
+  { label: "Plan To Read", key: "future" },
+  { label: "Audio", key: "audio" },
 ];
+
 export const gamingMenu = [];

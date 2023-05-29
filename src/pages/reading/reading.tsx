@@ -1,8 +1,9 @@
 import { FC } from "react";
+import Book from "../../components/book/book.lazy";
 import Header from "../../components/header/header.lazy";
 import Quote from "../../components/quote/quote.lazy";
+import Read from "../../components/read/read.lazy";
 import { readingMenu } from "../../configs/menu-items";
-import Book from "../../components/book/book.lazy";
 
 interface ReadingProps {}
 
@@ -11,6 +12,7 @@ const Reading: FC<ReadingProps> = () => (
     <Header items={readingMenu} />
     <Quote />
     <Book />
+    <Read />
   </div>
 );
 
