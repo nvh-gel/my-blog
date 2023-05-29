@@ -1,0 +1,17 @@
+.filter {
+    margin-bottom: 20px;
+    span {
+        font-family: "Dosis";
+        font-size: 22px;
+        color: rgb(51, 51, 51);
+
+        &:hover {
+            color: #7cb14a;
+        }
+    }
+}
+
+.book {
+    border: #98d361 solid 4px;
+    margin: 10px 0px;
+}

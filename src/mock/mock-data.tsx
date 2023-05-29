@@ -11,6 +11,7 @@ import {
   faGears,
   faPeopleGroup,
 } from "@fortawesome/free-solid-svg-icons";
+import { BookData } from "../interface/book-data";
 import { BookReviewData } from "../interface/book-review";
 import NewsData from "../interface/news";
 import PracticeData from "../interface/practice";
@@ -383,5 +384,134 @@ export const bookReviewData: BookReviewData[] = [
       },
     ],
   },
+];
 
+export const bookCategories: string[] = [
+  "Fiction",
+  "Science",
+  "Fantasy",
+  "History",
+];
+
+export const bookData: BookData[] = [
+  {
+    id: 0,
+    title:
+      "There Will Be Fire: Margaret Thatcher, the IRA, and Two Minutes That Changed History",
+    description:
+      "Say Nothing meets The Day of the Jackal in this gripping and illuminating story about a history-changing moment of violence. Margaret Thatcher, the IRA, a lethal explosion, and the epic manhunt that followed--a Guardian journalist brings all of this together in the first full-length book about the 1984 Brighton Bombing.",
+    img: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1658496872i/61420116.jpg",
+    author: "Rory Carroll",
+    publishedDate: new Date("04/04/2023"),
+    category: "History",
+  },
+  {
+    id: 1,
+    title: "Future of Geography",
+    description:
+      "Spy satellites orbiting the moon. Space metals worth more than most countries’ GDP. People on Mars within the next ten years.",
+    img: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1666195524i/62675564.jpg",
+    author: "Tim Marshall",
+    publishedDate: new Date("27/04/2023"),
+    category: "History",
+  },
+  {
+    id: 2,
+    title:
+      "Crack-Up Capitalism: Market Radicals and the Dream of a World Without Democracy",
+    description:
+      "In a revelatory dispatch from the frontier of capitalist extremism, an acclaimed historian of ideas shows how free marketeers are realizing their ultimate goal: an end to nation-states and the constraints of democracy.",
+    img: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1673873815i/60784541.jpg",
+    author: "Quinn Slobodian",
+    publishedDate: new Date("04/04/2023"),
+    category: "History",
+  },
+  {
+    id: 347,
+    title: "The Last Heir to Blackwood Library",
+    description:
+      "In post-World War I England, a young woman inherits a mysterious library and must untangle its powerful secrets…",
+    img: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1662711687i/61155405.jpg",
+    author: "Hester Fox",
+    publishedDate: new Date("04/04/2023"),
+    category: "Fantasy",
+  },
+  {
+    id: 324,
+    title: "Camp Zero",
+    description: "In a near-future northern settlement, a handful of climate change survivors find their fates intertwined in this mesmerizing and transportive novel in the vein of Station Eleven and The Power.",
+    img: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1680273431i/61273342.jpg",
+    author: "Michelle Min Sterling",
+    publishedDate: new Date("04/04/2023"),
+    category: "Fiction",
+  },
+  {
+    id: 439,
+    title: "Divine Rivals",
+    description:
+      "When two young rival journalists find love through a magical connection, they must face the depths of hell, in a war among gods, to seal their fate forever.",
+    img: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1655928079i/60784546.jpg",
+    author: "Rebecca Ross",
+    publishedDate: new Date("04/04/2023"),
+    category: "Fantasy",
+  },
+  {
+    id: 411,
+    title: "Some Desperate Glory",
+    description:
+      "All her life Kyr has trained for the day she can avenge the murder of planet Earth. Raised in the bowels of Gaea Station alongside the last scraps of humanity, she readies herself to face the Wisdom, the all-powerful, reality-shaping weapon that gave the Majoda their victory over humanity.",
+    img: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1668621616i/58388343.jpg",
+    author: "Emily Tesh",
+    publishedDate: new Date("11/04/2023"),
+    category: "Fantasy",
+  },
+  {
+    id: 500,
+    title: "The Killer Whale Journals: Our Love and Fear of Orcas",
+    description: "When intrepid biology student Hanne Strager volunteered to be the cook on a small research vessel in Norway's Lofoten Islands, the trip inspired a decades-long journey into the lives of killer whales",
+    img: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1664147218i/58643409.jpg",
+    author: "Hanne Strager, Paul Nicklen",
+    publishedDate: new Date("11/04/2023"),
+    category: "Science",
+  },
+  {
+    id: 435,
+    title: "Symphony of Secrets",
+    description:
+      "Determined to uncover the truth and right history’s wrongs, Bern Hendricks will stop at nothing to finally give Josephine the recognition she deserves.",
+    img: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1670796966i/61111253.jpg",
+    author: "Brendan Slocumb",
+    publishedDate: new Date("18/04/2023"),
+    category: "Fiction",
+  },
+  {
+    id: 385,
+    title: "Saturday Night at the Lakeside Supper Club",
+    description:
+      "A story of a couple from two very different restaurant families in rustic Minnesota, and the legacy of love and tragedy, of hardship and hope, that unites and divides them",
+    img: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1658498406i/61653268.jpg",
+    author: "J. Ryan Stradal",
+    publishedDate: new Date("18/04/2023"),
+    category: "Fiction",
+  },
+  {
+    id: 10,
+    title: "Atalanta",
+    description:
+      "From the beloved, bestselling author of Elektra and Ariadne , a reimagining of the myth of Atalanta, a fierce huntress raised by bears and the only woman in the world's most famous band of heroes, the Argonauts",
+    img: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1675082381i/61884838.jpg",
+    author: "Jennifer Saint",
+    publishedDate: new Date("11/04/2023"),
+    category: "Fantasy",
+  },
+  {
+    id: 11,
+    title: "Silver in the Bone",
+    description:
+      "A series opener inspired by Arthurian legend and fueled by love, revenge, and pure adrenaline!",
+    img: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1664201158i/62031346.jpg",
+    author: "Alexandra Bracken",
+    publishedDate: new Date("04/04/2023"),
+    category: "Fantasy",
+  },
 ];
