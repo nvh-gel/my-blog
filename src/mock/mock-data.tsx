@@ -11,8 +11,9 @@ import {
   faGears,
   faPeopleGroup,
 } from "@fortawesome/free-solid-svg-icons";
-import PracticeData from "../interface/practice";
+import { BookReviewData } from "../interface/book-review";
 import NewsData from "../interface/news";
+import PracticeData from "../interface/practice";
 import WorkData from "../interface/work";
 
 export const serviceData = [
@@ -109,7 +110,7 @@ export const projectData = [
 
 export const newsData: NewsData[] = [
   {
-    id:0,
+    id: 0,
     title: "ChatGPT Comes to Your iPhone With OpenAI's New iOS App",
     content:
       "OpenAI on Thursday dropped a ChatGPT app for iOS. The new app gives you a way to take OpenAI's AI chatbot on the go.\nThe free app works on iPhones and iPads, supports voice input and syncs your history across devices. Like using ChatGPT on a computer, the iOS app can answer questions, help with travel plans, write poems and more...",
@@ -117,7 +118,7 @@ export const newsData: NewsData[] = [
     img: "https://www.cnet.com/a/img/resize/7b6d562a59a510a770ec37325bea17f9cdf81749/hub/2023/05/18/e1f84082-50e8-47b1-8e9d-d7df6492dd56/untitled-design.png?auto=webp&fit=crop&height=675&width=1200",
   },
   {
-    id:1,
+    id: 1,
     title: "How AI is helping historians better understand our past",
     content:
       "The historians of tomorrow are using computer science to analyze how people lived centuries ago. By Moira Donovanarchive page",
@@ -125,7 +126,7 @@ export const newsData: NewsData[] = [
     img: "https://wp.technologyreview.com/wp-content/uploads/2023/04/Hoeckel-1-final.jpeg?fit=944,1262",
   },
   {
-    id:2,
+    id: 2,
     title: "Our quick guide to the 6 ways we can regulate AI",
     content:
       "Let us walk you through all the most (and least) promising efforts to govern AI around the world.\nBy Melissa Heikkiläarchive page",
@@ -134,11 +135,12 @@ export const newsData: NewsData[] = [
   },
   {
     id: 3,
-    title:"Apple WWDC 2023: Everything We Expect at the June 5 Event",
-    content:"Apple's big developers conference could be where the company debuts its new AR glasses.",
-    url:"https://www.cnet.com/tech/mobile/apple-wwdc-2023-everything-we-expect-at-the-june-5-event/",
+    title: "Apple WWDC 2023: Everything We Expect at the June 5 Event",
+    content:
+      "Apple's big developers conference could be where the company debuts its new AR glasses.",
+    url: "https://www.cnet.com/tech/mobile/apple-wwdc-2023-everything-we-expect-at-the-june-5-event/",
     img: "https://www.cnet.com/a/img/resize/c00b91cc6f2af6d40ae3ee89cb046065d7e50b84/hub/2023/03/29/dff2e885-da57-4eed-a53c-4e302496df29/apple-wwdc23-hero-big-jpg-large.jpg?auto=webp&fit=crop&height=675&width=1200",
-  }
+  },
 ];
 
 export const workData: WorkData[] = [
@@ -266,4 +268,120 @@ export const practiceData: PracticeData[] = [
       "https://i.ytimg.com/an_webp/x_fHXt9V3zQ/mqdefault_6s.webp?du=3000&sqp=CLy4saMG&rs=AOn4CLB0o74rgrt56D4I286ASrwwcWgh_w",
     video: "https://www.youtube.com/embed/x_fHXt9V3zQ",
   },
+];
+
+export const bookReviewData: BookReviewData[] = [
+  {
+    id: 0,
+    title: "Life of Pi",
+    img: "https://www.bookloverbookreviews.com/wp-content/uploads/2010/09/life-of-pi.jpg?ezimgfmt=ngcb88/notWebP",
+    description:
+      'Life of Pi is a fantasy adventure novel by Yann Martel published in 2001. The protagonist, Piscine Molitor "Pi" Patel, a Tamil boy from Pondicherry, explores issues of spirituality and practicality from an early age. He survives 227 days after a shipwreck while stranded on a boat in the Pacific Ocean with a Bengal tiger named Richard Parker.',
+    publishedDate: new Date("11/09/2011"),
+    completedDate: new Date("12/03/2023"),
+    review:
+      "I read this book two years ago, but when we discussed it this month for book club, I remembered how much I liked it. A good discussion always ups my appreciation of a novel as does an ending that makes me requestion my givens in the story. I find myself reading contradictory interpretations and agreeing with both sides. That's the beauty of symbolism: as long as you back up your cause, it's plausible.",
+    others: [
+      {
+        id: 0,
+        review:
+          "Human ingenuity and animal grace course through this rich, inventive play about difficult choices and the stories we tell to make sense of them.",
+        author: "The New York Times",
+      },
+      {
+        id: 1,
+        review:
+          "The plot and the character make this one of the most intriguing novels and it doesn't hurt that the movie was good too. Find out why you should be reading this epic novel!",
+        author: "Books of Brilliance",
+      },
+      {
+        id: 2,
+        review:
+          "A really thrilling and dramatic narrative constructed around an often-bloody fight for life and death-arrives in an even, measured, paced, and scaled voice.",
+        author: "Bookishelf",
+      },
+      {
+        id: 3,
+        review:
+          "This novel includes such depth and truth about the relationship between humans and animals, and between life and death.",
+        author: "Amy's Bookshelf",
+      },
+    ],
+  },
+  {
+    id: 1,
+    title: "Life of Pi",
+    img: "https://www.bookloverbookreviews.com/wp-content/uploads/2010/09/life-of-pi.jpg?ezimgfmt=ngcb88/notWebP",
+    description:
+      'Life of Pi is a fantasy adventure novel by Yann Martel published in 2001. The protagonist, Piscine Molitor "Pi" Patel, a Tamil boy from Pondicherry, explores issues of spirituality and practicality from an early age. He survives 227 days after a shipwreck while stranded on a boat in the Pacific Ocean with a Bengal tiger named Richard Parker.',
+    publishedDate: new Date("11/09/2011"),
+    completedDate: new Date("12/03/2023"),
+    review:
+      "I read this book two years ago, but when we discussed it this month for book club, I remembered how much I liked it. A good discussion always ups my appreciation of a novel as does an ending that makes me requestion my givens in the story. I find myself reading contradictory interpretations and agreeing with both sides. That's the beauty of symbolism: as long as you back up your cause, it's plausible.",
+    others: [
+      {
+        id: 0,
+        review:
+          "Human ingenuity and animal grace course through this rich, inventive play about difficult choices and the stories we tell to make sense of them.",
+        author: "The New York Times",
+      },
+      {
+        id: 1,
+        review:
+          "The plot and the character make this one of the most intriguing novels and it doesn't hurt that the movie was good too. Find out why you should be reading this epic novel!",
+        author: "Books of Brilliance",
+      },
+      {
+        id: 2,
+        review:
+          "A really thrilling and dramatic narrative constructed around an often-bloody fight for life and death-arrives in an even, measured, paced, and scaled voice.",
+        author: "Bookishelf",
+      },
+      {
+        id: 3,
+        review:
+          "This novel includes such depth and truth about the relationship between humans and animals, and between life and death.",
+        author: "Amy's Bookshelf",
+      },
+    ],
+  },
+
+  {
+    id: 2,
+    title: "Life of Pi",
+    img: "https://www.bookloverbookreviews.com/wp-content/uploads/2010/09/life-of-pi.jpg?ezimgfmt=ngcb88/notWebP",
+    description:
+      'Life of Pi is a fantasy adventure novel by Yann Martel published in 2001. The protagonist, Piscine Molitor "Pi" Patel, a Tamil boy from Pondicherry, explores issues of spirituality and practicality from an early age. He survives 227 days after a shipwreck while stranded on a boat in the Pacific Ocean with a Bengal tiger named Richard Parker.',
+    publishedDate: new Date("11/09/2011"),
+    completedDate: new Date("12/03/2023"),
+    review:
+      "I read this book two years ago, but when we discussed it this month for book club, I remembered how much I liked it. A good discussion always ups my appreciation of a novel as does an ending that makes me requestion my givens in the story. I find myself reading contradictory interpretations and agreeing with both sides. That's the beauty of symbolism: as long as you back up your cause, it's plausible.",
+    others: [
+      {
+        id: 0,
+        review:
+          "Human ingenuity and animal grace course through this rich, inventive play about difficult choices and the stories we tell to make sense of them.",
+        author: "The New York Times",
+      },
+      {
+        id: 1,
+        review:
+          "The plot and the character make this one of the most intriguing novels and it doesn't hurt that the movie was good too. Find out why you should be reading this epic novel!",
+        author: "Books of Brilliance",
+      },
+      {
+        id: 2,
+        review:
+          "A really thrilling and dramatic narrative constructed around an often-bloody fight for life and death-arrives in an even, measured, paced, and scaled voice.",
+        author: "Bookishelf",
+      },
+      {
+        id: 3,
+        review:
+          "This novel includes such depth and truth about the relationship between humans and animals, and between life and death.",
+        author: "Amy's Bookshelf",
+      },
+    ],
+  },
+
 ];

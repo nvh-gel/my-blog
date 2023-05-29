@@ -1,34 +1,111 @@
-.reviews {
-    .review-item {
-        text-align: left;
+.review {
+    height: 600px;
+    margin-bottom: 20px;
+    color: white;
 
-        .decorator {
-            background-color: rgba(152, 211, 97, 0.5);
-            position: absolute;
-            width: 150%;
-            top: 120px;
-            z-index: 520;
-            left: -5%;
-        }
+    .thumbnail {
+        .thumb-row {
+            margin-top: 5%;
+            height: 90%;
+            background-color: white;
 
-        .book-image {
-            position: absolute;
-            z-index: 510;
-        }
-
-        .review-detail {
-            font-family: "Dosis";
-        }
-
-        .other-review {
-            margin: 0px 10px;
-            padding: 30px 5px 5px 5px;
-            background-color: #eee;
-            .reviewer {
-                text-align: right;
+            img {
+                max-width: 50%;
             }
-            border-radius: 10px;
-            box-shadow: 5px 5px #aaa;
+        }
+    }
+
+    .content {
+        margin-top: 5%;
+        height: 90%;
+        p {
+            font-family: "Dosis";
+            font-size: 18px;
+        }
+        h2 {
+            position: relative;
+            font-family: "Dosis";
+            font-size: 32px;
+        }
+
+        .description {
+            position: relative;
+        }
+
+        .public-reviews {
+            color: white;
+            .other-review {
+                padding: 0px 10px;
+
+                svg {
+                    color: white;
+                    text-align: right;
+                    border: #eee solid 2px;
+                    height: 32px;
+                    width: 32px;
+                    float: right;
+                    position: relative;
+                }
+
+                p {
+                    font-size: 16px;
+                    margin-bottom: 0px;
+                }
+
+                .author {
+                    float: right;
+                    margin: 5px 0px;
+                }
+            }
+        }
+    }
+
+    &:nth-child(odd) {
+        text-align: left;
+        .thumbnail {
+            .thumb-row {
+                border-top-right-radius: 50%;
+                border-bottom-right-radius: 50%;
+            }
+        }
+
+        .content {
+            padding-left: 10px;
+
+            h2 {
+                left: -60px;
+            }
+
+            .description,
+            .public-reviews {
+                left: -30px;
+            }
+        }
+    }
+
+    &:nth-child(even) {
+        text-align: right;
+        .thumbnail {
+            .thumb-row {
+                border-top-left-radius: 50%;
+                border-bottom-left-radius: 50%;
+            }
+        }
+        .content {
+            padding-right: 10px;
+
+            h2 {
+                left: 60px;
+            }
+
+            .description,
+            .public-reviews {
+                left: 30px;
+
+                .other-review {
+                    text-align: left;
+                }
+            }
         }
     }
 }

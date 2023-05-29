@@ -1,12 +1,15 @@
-import { Carousel, Col, Image, Row, Space } from "antd";
+import { faQuoteRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Carousel, Col, Image, Row } from "antd";
 import { FC } from "react";
+import { bookReviewData } from "../../mock/mock-data";
 import "./book.scss";
 
 interface BookProps {}
 
 const Book: FC<BookProps> = () => (
   <div data-testid="Book">
-    <div className="headline">
+    <div className="headline" id="reviews">
       <p>Reviews</p>
     </div>
     <Row justify="center">
@@ -14,87 +17,88 @@ const Book: FC<BookProps> = () => (
         <div className="triangle" />
       </Col>
     </Row>
-    <Row justify="center">
-      <Col span={20}>
-        <Carousel className="reviews">
-          <Space className="review-item">
-            <Row justify="space-between">
-              <Col span={8} className="book-image">
-                <Image
-                  src="https://static01.nyt.com/images/2023/02/07/books/07salman-rushdie-cover/07salman-rushdie-cover-jumbo.jpg"
-                  preview={false}
-                />
-              </Col>
-              <Col span={8} />
-              <Col span={16}>
-                <Row className="decorator" align="middle" justify="center">
-                  {/* <Col span={24} offset={2}> */}
-                    <h2>&nbsp;</h2>
-                  {/* </Col> */}
-                </Row>
-                <Row className="review-detail">
-                  <Col span={24}>
-                    <h2>VICTORY CITY</h2>
-                  </Col>
-                  <br />
-                  <h4>Author: Salman Rushdie</h4>
-                  <p>
-                    Rushdie's new novel recounts the long life of Pampa Kampana,
-                    who creates an empire from magic seeds in 14th-century
-                    India. Her world is one of peace, where men and women are
-                    equal and all faiths welcome, but the story Rushdie tells is
-                    of a state that forever fails to live up to its ideals.
-                  </p>
-                  <Row style={{ width: "100%" }}>
-                    <Col span={12}>
-                      <h4>Published: 2018</h4>
-                    </Col>
-                    <Col span={12}>
-                      <h4>Completed on: 2023-01-23</h4>
-                    </Col>
-                  </Row>
-                  <h4>Personal Thoughts</h4>
-                  <p>
-                    Essentially political concerns have always been embedded —
-                    embodied — in the play of Rushdie's own style, in the
-                    irreverent exhilaration of a prose that works by piling one
-                    thing upon another, a digressive grammatical plenitude in
-                    which there is room for all.
-                  </p>
-                  <Row justify="space-evenly">
-                    <Col span={7} className="other-review">
-                      <p>
-                        <i>
-                          &ldquo;A grand entertainment, in a tale with many
-                          strands, by an ascended master of modern
-                          legends.&rdquo;
-                        </i>
-                      </p>
-                      <p className="reviewer">- Kirkus Review</p>
-                    </Col>
-                    <Col span={7} className="other-review">
-                      <p>
-                        In his first novel since last summer's brutal on-stage
-                        attack, Salman Rushdie's exuberant writing remains a
-                        source of pleasure
-                      </p>
-                      <p className="reviewer">- The Independent</p>
-                    </Col>
-                    <Col span={7} className="other-review">
-                      <p>
-                        With Victory City, Salman Rushdie delivers not so much a
-                        masterpiece as a plea for humanity
-                      </p>
-                      <p className="reviewer">- The Globe and Mail</p>
-                    </Col>
-                  </Row>
-                </Row>
+    {bookReviewData.map((review, index) => (
+      <Row
+        key={review.id}
+        justify="center"
+        className="review"
+        style={{
+          backgroundImage: `url(${"img/strip-bg-0" + (index + 1) + ".jpg"})`,
+        }}
+      >
+        {index % 2 === 0 ? (
+          <Col span={10} className="thumbnail">
+            <Row className="thumb-row" align="middle">
+              <Col span={6} className="thumb-span" />
+              <Col span={18}>
+                <Image src={review.img} preview={false} />
               </Col>
             </Row>
-          </Space>
-        </Carousel>
-      </Col>
-    </Row>
+          </Col>
+        ) : (
+          ""
+        )}
+        <Col span={14}>
+          <Row className="content">
+            {index % 2 === 1 ? <Col span={4} /> : ""}
+            <Col span={20}>
+              <h2>{review.title}</h2>
+              <p className="description">{review.description}</p>
+              <Row>
+                <Col span={12}>
+                  <p>
+                    <b>Published date: </b>
+                    {review.publishedDate.toLocaleDateString()}
+                  </p>
+                </Col>
+                <Col span={12}>
+                  <p>
+                    <b>Completed on: </b>
+                    {review.completedDate.toLocaleDateString()}
+                  </p>
+                </Col>
+              </Row>
+              <p>
+                <b>Personal thoughts:</b>
+              </p>
+              <p>{review.review}</p>
+              {/* <Row justify="space-evenly">
+
+              </Row> */}
+              <Carousel
+                slidesToShow={3}
+                autoplay
+                dots={false}
+                className="public-reviews"
+              >
+                {review.others.map((r) => (
+                  <div key={r.id} className="other-review">
+                    <FontAwesomeIcon icon={faQuoteRight} />
+                    <p>
+                      <i>&ldquo;{r.review}&rdquo;</i>
+                    </p>
+                    <p className="author">- {r.author}</p>
+                  </div>
+                ))}
+              </Carousel>
+            </Col>
+            {index % 2 === 0 ? <Col span={4} /> : ""}
+          </Row>
+        </Col>
+        {index % 2 === 1 ? (
+          <Col span={10} className="thumbnail">
+            <Row className="thumb-row" align="middle">
+              <Col span={18}>
+                <Image src={review.img} preview={false} />
+              </Col>
+              <Col span={6} className="thumb-span" />
+            </Row>
+          </Col>
+        ) : (
+          ""
+        )}
+      </Row>
+    ))}
   </div>
 );
 

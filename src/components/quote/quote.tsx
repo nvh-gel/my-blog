@@ -24,7 +24,6 @@ class Quote extends Component<QuoteProps, QuoteState> {
 
   render() {
     this.loadQuote();
-
     return (
       <div data-testid="Quote">
         <Space id="quote" className="quote" direction="vertical">
