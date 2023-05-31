@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Image, Row, Space } from "antd";
 import { motion } from "framer-motion";
 import { FC } from "react";
+import { ProjectData } from "../../interface/project";
 import { projectData } from "../../mock/mock-data";
 import "./project.scss";
 
@@ -31,8 +32,8 @@ const Project: FC<ProjectProps> = () => {
       </Row>
       <Row justify="center">
         <section id="cd-timeline-project" className="cd-container">
-          {projectData.map((project, id) => (
-            <div className="cd-timeline-block" key={project.title}>
+          {projectData.map((project: ProjectData, id) => (
+            <div className="cd-timeline-block" key={project.id}>
               <motion.div
                 className="cd-timeline-img"
                 initial={{ opacity: 0 }}
@@ -49,15 +50,14 @@ const Project: FC<ProjectProps> = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
-                <Image src={project.img} loading="lazy"/>
+                <Image src={project.img} loading="lazy" />
                 <div className="project-content">
                   <h2>{project.title}</h2>
                   <p>{project.date}</p>
                 </div>
                 <div className="project-desc">
                   <b>{project.role.toUpperCase()}</b>
-                  <p>{project.desc[0]}</p>
-                  <p>{project.desc[1]}</p>
+                  <p>{project.desc}</p>
                 </div>
               </motion.div>
             </div>

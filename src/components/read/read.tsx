@@ -1,7 +1,7 @@
 import { Button, Col, Row } from "antd";
 import { Component } from "react";
 import Gallery from "react-photo-gallery";
-import { BookData } from "../../interface/book-data";
+import { BookData } from "../../interface/book";
 import { bookCategories, bookData } from "../../mock/mock-data";
 import "./read.scss";
 

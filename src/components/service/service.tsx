@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Col, Row } from "antd";
 import { motion } from "framer-motion";
 import { FC } from "react";
@@ -31,7 +30,7 @@ const Service: FC<ServiceProps> = () => {
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                   >
-                    <FontAwesomeIcon icon={item.icon} />
+                    {/* <FontAwesomeIcon icon={item.icon} /> */}
                   </motion.div>
                   <motion.div
                     className="cd-timeline-content service-box-content"
@@ -44,9 +43,7 @@ const Service: FC<ServiceProps> = () => {
                     viewport={{ once: true }}
                   >
                     <h2>{item.title}</h2>
-                    {item.content.map((c: string) => (
-                      <p key={item.content.indexOf(c)}>{c}</p>
-                    ))}
+                    <p>{item.content}</p>
                   </motion.div>
                 </div>
               ))}
