@@ -1,16 +1,49 @@
-import { Button, Col, Image, Row } from "antd";
+import { Button, Col, Row } from "antd";
 import { Component } from "react";
+import Gallery from "react-photo-gallery";
+import { BookData } from "../../interface/book-data";
 import { bookCategories, bookData } from "../../mock/mock-data";
 import "./read.scss";
 
 interface ReadProps {}
 
-interface ReadState {}
+interface ReadState {
+  mode: string;
+  books: BookData[];
+}
 
 class Read extends Component<ReadProps, ReadState> {
+  private cats: string[];
+
+  constructor(props: ReadProps) {
+    super(props);
+    this.cats = bookCategories.slice();
+    this.cats.splice(0, 0, "All");
+    this.state = {
+      mode: "All",
+      books: bookData,
+    };
+
+    this.filterBook = this.filterBook.bind(this);
+  }
+
+  filterBook(cat: string): void {
+    this.setState({
+      mode: cat,
+      books:
+        cat === "All"
+          ? bookData
+          : bookData.filter((book) => book.category === cat),
+    });
+  }
+
   render() {
-    const cats = bookCategories.slice();
-    cats.splice(0, 0, "All");
+    const srcSet = this.state.books.map((book) => ({
+      src: book.img,
+      width: 2,
+      height: 3,
+    }));
+
     return (
       <div data-testid="Read">
         <Row justify="center" id="future">
@@ -24,23 +57,25 @@ class Read extends Component<ReadProps, ReadState> {
           <div className="triangle" />
         </Row>
         <Row justify="center" className="filter">
-          {cats.map((cat) => (
-            <Button type="link" key={cat}>
+          {this.cats.map((cat) => (
+            <Button
+              type="link"
+              key={cat}
+              onClick={() => this.filterBook(cat)}
+              className={cat === this.state.mode ? "active" : ""}
+            >
               {cat}
             </Button>
           ))}
         </Row>
         <Row justify="center">
-          <Col span={20}>
-            <Row justify="space-evenly" style={{marginBottom:20}}>
-              {bookData.map((book) => (
-                <Col span={5} key={book.id}>
-                  <div className="book">
-                    <Image src={book.img} preview={false}/>
-                  </div>
-                </Col>
-              ))}
-            </Row>
+          <Col span={20} className="books">
+            <Gallery
+              photos={srcSet}
+              direction="column"
+              columns={4}
+              margin={10}
+            />
           </Col>
         </Row>
       </div>

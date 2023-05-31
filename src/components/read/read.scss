@@ -9,9 +9,16 @@
             color: #7cb14a;
         }
     }
+
+    .active {
+        span {
+            color: #7cb14a;
+        }
+    }
 }
 
-.book {
-    border: #98d361 solid 4px;
-    margin: 10px 0px;
+.books {
+    img {
+        border: #98d361 solid 5px;
+    }
 }
